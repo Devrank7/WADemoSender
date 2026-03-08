@@ -1,0 +1,847 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="565" viewBox="0 5 800 565">
+<style>.d{fill:none;stroke:#1b2a32;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}.f{fill:#1b2a32;stroke:none}</style>
+
+<!-- Row 1 -->
+<!-- Smiley -->
+<circle class="d" cx="45" cy="35" r="14"/>
+<circle class="f" cx="40" cy="31" r="2"/>
+<circle class="f" cx="50" cy="31" r="2"/>
+<path class="d" d="M38 39c0 0 3 5 7 5s7-5 7-5"/>
+
+<!-- Watermelon -->
+<path class="d" d="M95 15 a20 20 0 0 1 0 40 Z"/>
+<path class="d" d="M95 20 a15 15 0 0 1 0 30"/>
+<circle class="f" cx="100" cy="30" r="1.2"/>
+<circle class="f" cx="103" cy="37" r="1.2"/>
+<circle class="f" cx="98" cy="40" r="1.2"/>
+
+<!-- Calendar 24 -->
+<rect class="d" x="140" y="15" width="28" height="26" rx="3"/>
+<line class="d" x1="140" y1="24" x2="168" y2="24"/>
+<line class="d" x1="148" y1="12" x2="148" y2="18"/>
+<line class="d" x1="160" y1="12" x2="160" y2="18"/>
+<text class="f" x="146" y="38" font-size="11" font-family="sans-serif" font-weight="bold">24</text>
+
+<!-- Crown -->
+<path class="d" d="M195 40l5-18 7 10 7-10 7 10 7-10 5 18z"/>
+<line class="d" x1="195" y1="43" x2="233" y2="43"/>
+
+<!-- Shopping cart -->
+<path class="d" d="M260 20h5l7 20h18l5-14h-25"/>
+<circle class="d" cx="275" cy="45" r="3"/>
+<circle class="d" cx="288" cy="45" r="3"/>
+
+<!-- Heart large -->
+<path class="d" d="M330 30c0-8 12-14 18 0 6-14 18-8 18 0 0 12-18 22-18 22s-18-10-18-22z"/>
+
+<!-- Ferris wheel -->
+<circle class="d" cx="395" cy="30" r="18"/>
+<circle class="d" cx="395" cy="30" r="4"/>
+<line class="d" x1="395" y1="12" x2="395" y2="48"/>
+<line class="d" x1="377" y1="30" x2="413" y2="30"/>
+<line class="d" x1="382" y1="17" x2="408" y2="43"/>
+<line class="d" x1="382" y1="43" x2="408" y2="17"/>
+<path class="d" d="M380 48l15 12 15-12"/>
+
+<!-- Pencil -->
+<path class="d" d="M440 15l18 18-3 6-6-1z"/>
+<path class="d" d="M440 15l4-4 6 6-4 4"/>
+
+<!-- Cloud -->
+<path class="d" d="M495 42c-7 0-12-5-12-11 0-5 3-9 8-10 2-5 7-8 13-8 8 0 14 5 15 12 4 1 7 5 7 9 0 5-4 8-9 8z"/>
+
+<!-- Ice cream cone -->
+<path class="d" d="M555 18c6 0 10 4 10 9 0 4-3 8-7 9l-6 20-6-20c-4-1-7-5-7-9 0-5 4-9 10-9z"/>
+<circle class="d" cx="549" cy="20" r="6"/>
+<circle class="d" cx="559" cy="20" r="6"/>
+
+<!-- Star -->
+<path class="d" d="M610 12l4 12h13l-10 8 4 12-11-8-11 8 4-12-10-8h13z"/>
+
+<!-- Flower -->
+<circle class="d" cx="665" cy="30" r="5"/>
+<circle class="d" cx="665" cy="18" r="5"/>
+<circle class="d" cx="665" cy="42" r="5"/>
+<circle class="d" cx="653" cy="30" r="5"/>
+<circle class="d" cx="677" cy="30" r="5"/>
+<circle class="f" cx="665" cy="30" r="3"/>
+
+<!-- Gift -->
+<rect class="d" x="710" y="25" width="24" height="18" rx="2"/>
+<rect class="d" x="714" y="18" width="16" height="7" rx="2"/>
+<line class="d" x1="722" y1="18" x2="722" y2="43"/>
+<path class="d" d="M716 18c2-6 6-6 6 0M728 18c-2-6-6-6-6 0"/>
+
+<!-- Smiley wink -->
+<circle class="d" cx="775" cy="30" r="14"/>
+<circle class="f" cx="769" cy="26" r="2"/>
+<path class="d" d="M779 25l4 2"/>
+<path class="d" d="M767 35c0 0 4 5 8 5s8-5 8-5"/>
+
+<!-- Row 2 -->
+<!-- Crossword -->
+<rect class="d" x="25" y="80" width="12" height="12"/>
+<rect class="d" x="37" y="80" width="12" height="12"/>
+<rect class="d" x="49" y="80" width="12" height="12"/>
+<rect class="d" x="37" y="92" width="12" height="12"/>
+<rect class="d" x="37" y="68" width="12" height="12"/>
+<rect class="d" x="25" y="68" width="12" height="12" fill="#1b2a32"/>
+<text class="f" x="30" y="89" font-size="8" font-family="sans-serif" fill="#0b141a">j</text>
+<text class="f" x="42" y="89" font-size="8" font-family="sans-serif" fill="#0b141a">m</text>
+
+<!-- Camera -->
+<rect class="d" x="95" y="78" width="30" height="22" rx="4"/>
+<circle class="d" cx="110" cy="91" r="7"/>
+<circle class="d" cx="110" cy="91" r="3"/>
+<rect class="d" x="103" y="75" width="14" height="5" rx="2"/>
+
+<!-- X O game -->
+<line class="d" x1="160" y1="72" x2="160" y2="108"/>
+<line class="d" x1="175" y1="72" x2="175" y2="108"/>
+<line class="d" x1="148" y1="82" x2="187" y2="82"/>
+<line class="d" x1="148" y1="97" x2="187" y2="97"/>
+<circle class="d" cx="154" cy="77" r="4"/>
+<path class="d" d="M164 87l8 8M172 87l-8 8"/>
+
+<!-- Jellyfish -->
+<path class="d" d="M220 80c0-10 18-10 18 0v10c0 0-3 5-5 0s-3 5-5 0-3 5-5 0v-10z"/>
+<circle class="f" cx="226" cy="79" r="1.5"/>
+<circle class="f" cx="232" cy="79" r="1.5"/>
+
+<!-- Compass/clock -->
+<circle class="d" cx="275" cy="88" r="13"/>
+<circle class="d" cx="275" cy="88" r="2"/>
+<line class="d" x1="275" y1="88" x2="275" y2="79"/>
+<line class="d" x1="275" y1="88" x2="282" y2="88"/>
+<line class="d" x1="275" y1="76" x2="275" y2="78"/>
+<line class="d" x1="275" y1="98" x2="275" y2="100"/>
+<line class="d" x1="263" y1="88" x2="265" y2="88"/>
+<line class="d" x1="285" y1="88" x2="287" y2="88"/>
+
+<!-- Megaphone -->
+<path class="d" d="M325 75l22 8v10l-22 8z"/>
+<rect class="d" x="315" y="82" width="10" height="12" rx="2"/>
+<path class="d" d="M320 94v6c0 2 2 4 4 4h0"/>
+
+<!-- Cupcake -->
+<path class="d" d="M380 90c0-6 4-10 10-10s10 4 10 10"/>
+<path class="d" d="M378 90h24l-3 16h-18z"/>
+<circle class="d" cx="390" cy="83" r="3"/>
+
+<!-- Heart small -->
+<path class="d" d="M435 82c0-5 7-8 10 0 3-8 10-5 10 0 0 8-10 14-10 14s-10-6-10-14z"/>
+
+<!-- Apple -->
+<path class="d" d="M490 100c-8 0-14-8-14-16 0-7 5-12 10-12 3 0 4 2 4 2s1-2 4-2c5 0 10 5 10 12 0 8-6 16-14 16z"/>
+<path class="d" d="M490 72v6"/>
+
+<!-- Lollipop -->
+<circle class="d" cx="540" cy="80" r="10"/>
+<path class="d" d="M540 80c0-5 5-5 5 0s-5 5-5 0"/>
+<line class="d" x1="540" y1="90" x2="540" y2="108"/>
+
+<!-- Bowtie/butterfly -->
+<path class="d" d="M585 82l12 8-12 8z"/>
+<path class="d" d="M609 82l-12 8 12 8z"/>
+<circle class="f" cx="597" cy="90" r="2"/>
+
+<!-- Lock -->
+<rect class="d" x="635" y="85" width="18" height="14" rx="3"/>
+<path class="d" d="M639 85v-5a5 5 0 0110 0v5"/>
+<circle class="f" cx="644" cy="93" r="2"/>
+
+<!-- Speech bubble -->
+<rect class="d" x="685" y="75" width="26" height="18" rx="8"/>
+<path class="d" d="M695 93l-3 8 8-8"/>
+
+<!-- Moon -->
+<path class="d" d="M750 78a14 14 0 1 0 0 24 10 10 0 0 1 0-24z"/>
+<circle class="f" cx="755" cy="82" r="1"/>
+<circle class="f" cx="748" cy="92" r="1.5"/>
+
+<!-- Row 3 -->
+<!-- Rocket -->
+<path class="d" d="M35 155c0-12 10-25 10-25s10 13 10 25c0 5-4 8-10 8s-10-3-10-8z"/>
+<path class="d" d="M35 155l-5 8h7"/>
+<path class="d" d="M55 155l5 8h-7"/>
+<circle class="d" cx="45" cy="148" r="3"/>
+
+<!-- Thumbs up -->
+<path class="d" d="M90 145h8v22h-8z"/>
+<path class="d" d="M98 150h10c3 0 5 2 5 5v0c0 2-1 3-3 3h2c2 0 4 2 4 4v0c0 2-2 3-3 3h1c2 0 3 1 3 3v0c0 2-1 3-3 3H98"/>
+
+<!-- Taco -->
+<path class="d" d="M145 167c-12 0-20-8-20-18h40c0 10-8 18-20 18z"/>
+<path class="d" d="M130 149c4 0 5-4 10-4s6 4 10 4 5-4 10-4"/>
+
+<!-- Headphones -->
+<path class="d" d="M195 160a15 15 0 0130 0"/>
+<rect class="d" x="190" y="156" width="8" height="14" rx="3"/>
+<rect class="d" x="222" y="156" width="8" height="14" rx="3"/>
+
+<!-- Pizza slice -->
+<path class="d" d="M260 140l15 30h-30z"/>
+<path class="d" d="M253 158a22 22 0 0114 0"/>
+<circle class="f" cx="258" cy="155" r="2"/>
+<circle class="f" cx="265" cy="160" r="2"/>
+
+<!-- Coffee cup -->
+<rect class="d" x="310" y="140" width="22" height="24" rx="3"/>
+<path class="d" d="M332 148c5 0 8 3 8 7s-3 7-8 7"/>
+<line class="d" x1="310" y1="168" x2="332" y2="168"/>
+<path class="d" d="M317 135c0-3 2-3 2 0"/>
+<path class="d" d="M321 133c0-3 2-3 2 0"/>
+<path class="d" d="M325 135c0-3 2-3 2 0"/>
+
+<!-- Sunglasses -->
+<path class="d" d="M370 150h50"/>
+<circle class="d" cx="380" cy="155" r="8"/>
+<circle class="d" cx="408" cy="155" r="8"/>
+<line class="d" x1="388" y1="155" x2="400" y2="155"/>
+<line class="d" x1="370" y1="150" x2="370" y2="155"/>
+<line class="d" x1="420" y1="150" x2="420" y2="155"/>
+
+<!-- Gamepad -->
+<rect class="d" x="445" y="140" width="36" height="24" rx="8"/>
+<circle class="f" cx="472" cy="148" r="2.5"/>
+<circle class="f" cx="472" cy="157" r="2.5"/>
+<line class="d" x1="454" y1="148" x2="454" y2="158"/>
+<line class="d" x1="449" y1="153" x2="459" y2="153"/>
+
+<!-- Palette -->
+<circle class="d" cx="520" cy="152" r="16"/>
+<circle class="f" cx="514" cy="145" r="3"/>
+<circle class="f" cx="524" cy="142" r="3"/>
+<circle class="f" cx="530" cy="149" r="3"/>
+<circle class="f" cx="527" cy="158" r="3"/>
+<circle cx="514" cy="158" r="5" fill="#0b141a"/>
+
+<!-- Paper airplane -->
+<path class="d" d="M565 140l30 12-30 12 5-12z"/>
+<line class="d" x1="570" y1="152" x2="595" y2="152"/>
+
+<!-- Lightning bolt -->
+<path class="d" d="M630 135h12l-5 12h10l-15 22 4-14h-10z"/>
+
+<!-- Turtle -->
+<ellipse class="d" cx="690" cy="155" rx="16" ry="12"/>
+<path class="d" d="M690 143c0-4 6-8 6-8"/>
+<circle class="d" cx="706" cy="152" r="5"/>
+<circle class="f" cx="708" cy="151" r="1.5"/>
+<line class="d" x1="678" y1="162" x2="674" y2="168"/>
+<line class="d" x1="702" y1="162" x2="706" y2="168"/>
+
+<!-- Cactus -->
+<rect class="d" x="745" y="140" width="10" height="28" rx="5"/>
+<path class="d" d="M745 152h-5a5 5 0 010-10h5"/>
+<path class="d" d="M755 157h5a5 5 0 000-10h-5"/>
+
+<!-- Row 3.5 — filler between rows 3-4 -->
+<!-- Compass rose -->
+<circle class="d" cx="45" cy="192" r="8"/>
+<line class="d" x1="45" y1="182" x2="45" y2="202"/>
+<line class="d" x1="35" y1="192" x2="55" y2="192"/>
+<!-- DNA helix -->
+<path class="d" d="M105 182c5 5 15 5 20 0"/>
+<path class="d" d="M105 192c5-5 15-5 20 0"/>
+<path class="d" d="M105 202c5 5 15 5 20 0"/>
+<!-- Stamp -->
+<rect class="d" x="165" y="182" width="20" height="16" rx="2"/>
+<path class="d" d="M167 184h16M167 188h16M167 192h16"/>
+<rect class="d" x="170" y="198" width="10" height="6" rx="1"/>
+<!-- Hourglass mini -->
+<path class="d" d="M230 182h16M230 204h16M234 182l4 11-4 11M242 182l-4 11 4 11"/>
+<!-- Scissors -->
+<circle class="d" cx="290" cy="186" r="5"/>
+<circle class="d" cx="290" cy="198" r="5"/>
+<path class="d" d="M295 186l15 12M295 198l15-12"/>
+<!-- Rainbow small -->
+<path class="d" d="M340 202a12 12 0 0124 0"/>
+<path class="d" d="M344 202a8 8 0 0116 0"/>
+<!-- Telescope mini -->
+<line class="d" x1="400" y1="182" x2="420" y2="200"/>
+<circle class="d" cx="398" cy="180" r="4"/>
+<line class="d" x1="416" y1="200" x2="410" y2="208"/>
+<line class="d" x1="420" y1="200" x2="426" y2="208"/>
+<!-- Eye -->
+<path class="d" d="M455 192c6-8 18-8 24 0-6 8-18 8-24 0z"/>
+<circle class="d" cx="467" cy="192" r="4"/>
+<!-- Bandaid -->
+<rect class="d" x="510" y="184" width="24" height="14" rx="7" transform="rotate(-20 522 191)"/>
+<circle class="f" cx="519" cy="189" r="1"/>
+<circle class="f" cx="525" cy="189" r="1"/>
+<circle class="f" cx="519" cy="194" r="1"/>
+<circle class="f" cx="525" cy="194" r="1"/>
+<!-- Magnet -->
+<path class="d" d="M575 182v12a8 8 0 0016 0v-12"/>
+<line class="d" x1="575" y1="186" x2="581" y2="186"/>
+<line class="d" x1="585" y1="186" x2="591" y2="186"/>
+<!-- Alarm clock -->
+<circle class="d" cx="640" cy="193" r="10"/>
+<line class="d" x1="640" y1="193" x2="640" y2="186"/>
+<line class="d" x1="640" y1="193" x2="646" y2="193"/>
+<path class="d" d="M632 183l-3-3M648 183l3-3"/>
+<line class="d" x1="640" y1="203" x2="640" y2="206"/>
+<!-- Pie chart -->
+<circle class="d" cx="710" cy="193" r="10"/>
+<line class="d" x1="710" y1="193" x2="710" y2="183"/>
+<line class="d" x1="710" y1="193" x2="719" y2="197"/>
+<!-- Candy cane -->
+<path class="d" d="M770 205v-15a8 8 0 00-16 0"/>
+<line class="d" x1="766" y1="192" x2="774" y2="196"/>
+<line class="d" x1="762" y1="196" x2="770" y2="200"/>
+
+<!-- Row 4 -->
+<!-- Bicycle -->
+<circle class="d" cx="40" cy="230" r="12"/>
+<circle class="d" cx="80" cy="230" r="12"/>
+<path class="d" d="M40 230l15-18h15l10 18"/>
+<line class="d" x1="55" y1="212" x2="65" y2="212"/>
+<line class="d" x1="62" y1="212" x2="52" y2="230"/>
+
+<!-- Burger -->
+<path class="d" d="M115 215c0-6 8-10 18-10s18 4 18 10z"/>
+<line class="d" x1="112" y1="222" x2="154" y2="222"/>
+<path class="d" d="M114 222c2 2 6 2 8 0s6-2 8 0 6 2 8 0 6-2 8 0"/>
+<rect class="d" x="112" y="228" width="42" height="6" rx="3"/>
+
+<!-- Musical note -->
+<path class="d" d="M180 210v25"/>
+<circle class="d" cx="177" cy="235" r="5"/>
+<path class="d" d="M180 210h15v4h-15"/>
+
+<!-- Diamond -->
+<path class="d" d="M230 215h20l-10 20z"/>
+<path class="d" d="M225 215l5-8h20l5 8"/>
+<line class="d" x1="240" y1="207" x2="240" y2="215"/>
+
+<!-- Globe -->
+<circle class="d" cx="295" cy="225" r="15"/>
+<ellipse class="d" cx="295" cy="225" rx="7" ry="15"/>
+<line class="d" x1="280" y1="225" x2="310" y2="225"/>
+<path class="d" d="M283 217c4 2 8 2 12 2s8 0 12-2"/>
+<path class="d" d="M283 233c4-2 8-2 12-2s8 0 12 2"/>
+
+<!-- Candy -->
+<circle class="d" cx="350" cy="225" r="10"/>
+<path class="d" d="M340 220l-6-6M360 220l6-6M340 230l-6 6M360 230l6 6"/>
+<path class="d" d="M343 218c4 4 10 4 14 0"/>
+<path class="d" d="M343 225c4 4 10 4 14 0"/>
+
+<!-- Feather/Quill -->
+<path class="d" d="M400 240l20-30c5 3 2 12-3 15l3-8c-5 3-10 8-12 15z"/>
+<line class="d" x1="395" y1="245" x2="400" y2="240"/>
+
+<!-- Cat face -->
+<circle class="d" cx="460" cy="225" r="14"/>
+<path class="d" d="M448 214l4 10"/>
+<path class="d" d="M472 214l-4 10"/>
+<circle class="f" cx="454" cy="223" r="2"/>
+<circle class="f" cx="466" cy="223" r="2"/>
+<ellipse class="f" cx="460" cy="229" rx="3" ry="2"/>
+<path class="d" d="M457 229c-2 2-4 2-4 2"/>
+<path class="d" d="M463 229c2 2 4 2 4 2"/>
+
+<!-- Sun -->
+<circle class="d" cx="525" cy="225" r="10"/>
+<circle class="f" cx="521" cy="222" r="1.5"/>
+<circle class="f" cx="529" cy="222" r="1.5"/>
+<path class="d" d="M521 229c2 2 6 2 8 0"/>
+<line class="d" x1="525" y1="210" x2="525" y2="213"/>
+<line class="d" x1="525" y1="237" x2="525" y2="240"/>
+<line class="d" x1="510" y1="225" x2="513" y2="225"/>
+<line class="d" x1="537" y1="225" x2="540" y2="225"/>
+<line class="d" x1="514" y1="214" x2="517" y2="217"/>
+<line class="d" x1="533" y1="233" x2="536" y2="236"/>
+<line class="d" x1="536" y1="214" x2="533" y2="217"/>
+<line class="d" x1="517" y1="233" x2="514" y2="236"/>
+
+<!-- Fire -->
+<path class="d" d="M590 240c0-12 6-18 6-24-2 4-1 8 2 8 0-6 5-10 5-16 3 6 6 14 2 24-2 5-5 8-8 8s-7-4-7-8z"/>
+
+<!-- Waffle -->
+<rect class="d" x="630" y="210" width="28" height="28" rx="4"/>
+<line class="d" x1="640" y1="210" x2="640" y2="238"/>
+<line class="d" x1="648" y1="210" x2="648" y2="238"/>
+<line class="d" x1="630" y1="220" x2="658" y2="220"/>
+<line class="d" x1="630" y1="228" x2="658" y2="228"/>
+
+<!-- Football -->
+<ellipse class="d" cx="710" cy="225" rx="18" ry="10"/>
+<path class="d" d="M700 219c5 3 10 3 20 0"/>
+<path class="d" d="M700 231c5-3 10-3 20 0"/>
+<line class="d" x1="710" y1="215" x2="710" y2="235"/>
+<line class="d" x1="706" y1="221" x2="714" y2="221"/>
+<line class="d" x1="706" y1="229" x2="714" y2="229"/>
+
+<!-- Frog -->
+<circle class="d" cx="770" cy="230" r="12"/>
+<circle class="d" cx="764" cy="220" r="5"/>
+<circle class="d" cx="776" cy="220" r="5"/>
+<circle class="f" cx="764" cy="219" r="2"/>
+<circle class="f" cx="776" cy="219" r="2"/>
+<path class="d" d="M762 234c4 3 12 3 16 0"/>
+
+<!-- Row 4.5 — filler between rows 4-5 -->
+<!-- Pinecone -->
+<ellipse class="d" cx="45" cy="268" rx="8" ry="12"/>
+<path class="d" d="M39 262c3-1 6 1 6 1s3-2 6-1"/>
+<path class="d" d="M39 268c3-1 6 1 6 1s3-2 6-1"/>
+<path class="d" d="M39 274c3-1 6 1 6 1s3-2 6-1"/>
+<!-- Spinner -->
+<circle class="d" cx="105" cy="268" r="10"/>
+<circle class="d" cx="105" cy="268" r="3"/>
+<circle class="d" cx="105" cy="258" r="3"/>
+<circle class="d" cx="114" cy="273" r="3"/>
+<circle class="d" cx="96" cy="273" r="3"/>
+<!-- Paw print -->
+<ellipse class="f" cx="165" cy="272" rx="5" ry="4"/>
+<circle class="f" cx="157" cy="264" r="2.5"/>
+<circle class="f" cx="165" cy="261" r="2.5"/>
+<circle class="f" cx="173" cy="264" r="2.5"/>
+<!-- Candle -->
+<rect class="d" x="215" y="268" width="10" height="18" rx="2"/>
+<path class="d" d="M220 268c0-4 2-6 2-8-1 2 0 3 1 3 0-3 2-4 2-6 1 3 0 6-2 8"/>
+<!-- Skateboard -->
+<rect class="d" x="265" y="268" width="30" height="6" rx="3"/>
+<circle class="d" cx="274" cy="278" r="3"/>
+<circle class="d" cx="286" cy="278" r="3"/>
+<!-- Whistle -->
+<circle class="d" cx="340" cy="268" r="8"/>
+<rect class="d" x="348" y="264" width="15" height="8" rx="2"/>
+<circle class="d" cx="340" cy="268" r="3"/>
+<!-- Headband -->
+<path class="d" d="M395 275a12 12 0 0124 0"/>
+<path class="d" d="M407 263l-3 5 6-2-3 5 6-2"/>
+<!-- Wrench -->
+<path class="d" d="M455 260a6 6 0 108 8l14-14-8-8z"/>
+<line class="d" x1="463" y1="268" x2="475" y2="280"/>
+<!-- Tooth -->
+<path class="d" d="M520 260c-4 0-7 3-7 7 0 6 3 14 7 14s7-8 7-14c0-4-3-7-7-7z"/>
+<line class="d" x1="520" y1="260" x2="520" y2="268"/>
+<!-- Tent -->
+<path class="d" d="M565 280l12-20 12 20z"/>
+<line class="d" x1="577" y1="260" x2="577" y2="280"/>
+<line class="d" x1="571" y1="280" x2="583" y2="280"/>
+<!-- Binoculars -->
+<circle class="d" cx="630" cy="268" r="7"/>
+<circle class="d" cx="650" cy="268" r="7"/>
+<rect class="d" x="637" y="264" width="6" height="8" rx="1"/>
+<!-- Acorn -->
+<path class="d" d="M705 265a8 8 0 01-16 0z"/>
+<ellipse class="d" cx="697" cy="265" rx="9" ry="4"/>
+<line class="d" x1="697" y1="261" x2="697" y2="255"/>
+<!-- Gem -->
+<path class="d" d="M758 262h16l-8 16z"/>
+<path class="d" d="M755 262l3-6h16l3 6"/>
+
+<!-- Row 5 -->
+<!-- House -->
+<rect class="d" x="25" y="310" width="30" height="22" rx="1"/>
+<path class="d" d="M20 310l20-16 20 16"/>
+<rect class="d" x="35" y="318" width="10" height="14"/>
+<rect class="d" x="28" y="314" width="7" height="7"/>
+<line class="d" x1="31" y1="314" x2="31" y2="321"/>
+<line class="d" x1="28" y1="317" x2="35" y2="317"/>
+
+<!-- Flamingo -->
+<circle class="d" cx="95" cy="295" r="5"/>
+<circle class="f" cx="97" cy="294" r="1.2"/>
+<path class="d" d="M95 300c0 10-8 18-8 28"/>
+<path class="d" d="M87 328l-4 5M87 328l4 3"/>
+<path class="d" d="M100 295l6-2"/>
+
+<!-- Balloon -->
+<ellipse class="d" cx="148" cy="300" r="12" ry="16"/>
+<path class="d" d="M145 316l3 2 3-2"/>
+<line class="d" x1="148" y1="318" x2="148" y2="335"/>
+
+<!-- Building -->
+<rect class="d" x="190" y="295" width="22" height="40" rx="1"/>
+<rect class="d" x="215" y="305" width="16" height="30" rx="1"/>
+<rect class="d" x="194" y="300" width="5" height="5"/>
+<rect class="d" x="203" y="300" width="5" height="5"/>
+<rect class="d" x="194" y="310" width="5" height="5"/>
+<rect class="d" x="203" y="310" width="5" height="5"/>
+<rect class="d" x="194" y="320" width="5" height="5"/>
+<rect class="d" x="203" y="320" width="5" height="5"/>
+<rect class="d" x="219" y="310" width="4" height="4"/>
+<rect class="d" x="219" y="318" width="4" height="4"/>
+<rect class="d" x="219" y="326" width="4" height="4"/>
+
+<!-- Clover -->
+<circle class="d" cx="270" cy="298" r="7"/>
+<circle class="d" cx="258" cy="305" r="7"/>
+<circle class="d" cx="270" cy="312" r="7"/>
+<circle class="d" cx="282" cy="305" r="7"/>
+<line class="d" x1="270" y1="312" x2="270" y2="330"/>
+
+<!-- Telescope -->
+<path class="d" d="M320 330l15-25 8 5-15 25z"/>
+<path class="d" d="M335 305l10-16 6 3-10 16"/>
+<line class="d" x1="320" y1="330" x2="310" y2="340"/>
+<line class="d" x1="328" y1="322" x2="338" y2="340"/>
+
+<!-- Donut -->
+<circle class="d" cx="390" cy="310" r="14"/>
+<circle class="d" cx="390" cy="310" r="5"/>
+<path class="d" d="M378 305c3-2 8-1 12 1s8 1 12-1"/>
+
+<!-- Dinosaur -->
+<path class="d" d="M435 320c0-15 5-25 12-25 4 0 6 3 6 8v17"/>
+<circle class="f" cx="448" cy="300" r="1.5"/>
+<path class="d" d="M435 320c-5 0-8-3-8-8v-5"/>
+<path class="d" d="M445 308h10c0 5-4 12-10 12"/>
+<line class="d" x1="440" y1="320" x2="440" y2="330"/>
+<line class="d" x1="448" y1="320" x2="448" y2="330"/>
+
+<!-- Bell -->
+<path class="d" d="M495 325c-8 0-12-4-12-12v-6a12 12 0 0124 0v6c0 8-4 12-12 12z"/>
+<line class="d" x1="495" y1="295" x2="495" y2="300"/>
+<path class="d" d="M490 325c0 3 2 5 5 5s5-2 5-5"/>
+
+<!-- Mushroom -->
+<path class="d" d="M540 315a16 16 0 0132 0z"/>
+<rect class="d" x="551" y="315" width="10" height="12" rx="2"/>
+<circle class="f" cx="550" cy="305" r="3"/>
+<circle class="f" cx="562" cy="302" r="2"/>
+
+<!-- Key -->
+<circle class="d" cx="610" cy="305" r="8"/>
+<circle class="d" cx="610" cy="305" r="3"/>
+<line class="d" x1="618" y1="305" x2="638" y2="305"/>
+<line class="d" x1="633" y1="305" x2="633" y2="312"/>
+<line class="d" x1="638" y1="305" x2="638" y2="312"/>
+
+<!-- Leaf -->
+<path class="d" d="M670 320c0-20 25-25 25-25s-5 25-25 25z"/>
+<path class="d" d="M670 320c10-10 18-18 25-25"/>
+
+<!-- Ship -->
+<path class="d" d="M720 325l-8-15h36l-8 15z"/>
+<rect class="d" x="728" y="300" width="8" height="10" rx="1"/>
+<line class="d" x1="732" y1="290" x2="732" y2="300"/>
+<path class="d" d="M732 292l12 5"/>
+
+<!-- Row 6 -->
+<!-- Bee -->
+<ellipse class="d" cx="45" cy="390" rx="10" ry="8"/>
+<line class="d" x1="40" y1="385" x2="40" y2="394"/>
+<line class="d" x1="46" y1="384" x2="46" y2="396"/>
+<path class="d" d="M55 390l5 0"/>
+<circle class="d" cx="56" cy="388" r="1.5"/>
+<path class="d" d="M38 382c-4-5-2-8-2-8"/>
+<path class="d" d="M42 382c-2-6 0-9 0-9"/>
+<ellipse class="d" cx="38" cy="382" rx="6" ry="3" transform="rotate(-30 38 382)"/>
+<ellipse class="d" cx="48" cy="382" rx="6" ry="3" transform="rotate(30 48 382)"/>
+
+<!-- Popcorn -->
+<path class="d" d="M100 375c3-2 6-2 8 0 2-3 6-3 8 0 2-2 6-2 8 0"/>
+<path class="d" d="M98 375l4 25h20l4-25"/>
+<circle class="f" cx="108" cy="385" r="2"/>
+<circle class="f" cx="115" cy="390" r="2"/>
+<circle class="f" cx="112" cy="382" r="2"/>
+
+<!-- Rabbit -->
+<circle class="d" cx="160" cy="395" r="12"/>
+<ellipse class="d" cx="153" cy="375" rx="4" ry="10"/>
+<ellipse class="d" cx="167" cy="375" rx="4" ry="10"/>
+<circle class="f" cx="155" cy="392" r="2"/>
+<circle class="f" cx="165" cy="392" r="2"/>
+<ellipse class="f" cx="160" cy="398" rx="3" ry="2"/>
+
+<!-- Umbrella -->
+<path class="d" d="M220 380a18 18 0 0136 0"/>
+<line class="d" x1="238" y1="370" x2="238" y2="408"/>
+<path class="d" d="M238 408c-4 0-6-2-6-5"/>
+<path class="d" d="M220 380c3-3 6 0 9-3s6 0 9-3 6 0 9-3 6 0 9-3"/>
+
+<!-- Soccer ball -->
+<circle class="d" cx="300" cy="390" r="14"/>
+<path class="d" d="M300 376l-5 8h10z"/>
+<path class="d" d="M286 390l3-6h6l3 6-3 6h-6z"/>
+<path class="d" d="M310 384l4 6-4 6"/>
+
+<!-- Snowflake -->
+<line class="d" x1="360" y1="375" x2="360" y2="405"/>
+<line class="d" x1="347" y1="382" x2="373" y2="398"/>
+<line class="d" x1="347" y1="398" x2="373" y2="382"/>
+<line class="d" x1="355" y1="378" x2="360" y2="382"/>
+<line class="d" x1="365" y1="378" x2="360" y2="382"/>
+<line class="d" x1="355" y1="402" x2="360" y2="398"/>
+<line class="d" x1="365" y1="402" x2="360" y2="398"/>
+
+<!-- Croissant -->
+<path class="d" d="M410 400c-5-5-5-15 0-20 3-3 8-3 12 0l-6 10 6 10c-4 3-9 3-12 0z"/>
+<path class="d" d="M422 380c5 5 5 15 0 20"/>
+
+<!-- Popsicle -->
+<rect class="d" x="465" y="375" width="16" height="22" rx="8"/>
+<line class="d" x1="473" y1="397" x2="473" y2="412"/>
+
+<!-- Swan -->
+<path class="d" d="M530 405c-8 0-15-4-15-10 0-4 3-7 7-7"/>
+<path class="d" d="M522 388c0-12 4-20 8-20 3 0 4 3 4 6"/>
+<circle class="f" cx="531" cy="373" r="1.5"/>
+<path class="d" d="M534 375l4-1"/>
+<path class="d" d="M530 405c8 0 15-4 15-10"/>
+
+<!-- Trophy -->
+<path class="d" d="M580 375h24v12c0 6-5 10-12 10s-12-4-12-10z"/>
+<path class="d" d="M580 380c-5 0-8 3-8 7s3 7 8 7"/>
+<path class="d" d="M604 380c5 0 8 3 8 7s-3 7-8 7"/>
+<line class="d" x1="592" y1="397" x2="592" y2="405"/>
+<rect class="d" x="584" y="405" width="16" height="4" rx="1"/>
+
+<!-- Planet -->
+<circle class="d" cx="660" cy="390" r="12"/>
+<ellipse class="d" cx="660" cy="390" rx="22" ry="6" transform="rotate(-20 660 390)"/>
+
+<!-- Dragon -->
+<circle class="d" cx="730" cy="385" r="8"/>
+<circle class="f" cx="733" cy="383" r="1.5"/>
+<path class="d" d="M738 385l5-2"/>
+<path class="d" d="M722 385c-10 5-15 15-10 20"/>
+<path class="d" d="M712 405l-3-3M712 405l3-2"/>
+<path class="d" d="M726 378l-2-5 3 1 1-5 2 4 4-3"/>
+
+<!-- Row 7 -->
+<!-- Whale -->
+<path class="d" d="M35 460c0-10 12-18 22-18s18 8 18 18c0 8-8 14-18 14s-22-6-22-14z"/>
+<circle class="f" cx="48" cy="454" r="2"/>
+<path class="d" d="M30 458c-4-6-2-12-2-12"/>
+<path class="d" d="M75 455c4-4 8-4 8 0"/>
+<path class="d" d="M75 455c4 4 8 4 8 0"/>
+
+<!-- Hourglass -->
+<rect class="d" x="110" y="440" width="22" height="4" rx="1"/>
+<rect class="d" x="110" y="472" width="22" height="4" rx="1"/>
+<path class="d" d="M114 444l7 14-7 14"/>
+<path class="d" d="M128 444l-7 14 7 14"/>
+
+<!-- Ghost -->
+<path class="d" d="M170 445c0-8 6-14 14-14s14 6 14 14v24c-3-3-5 0-7 0s-4-3-7 0-4-3-7 0-4-3-7 0v-24z"/>
+<circle class="f" cx="178" cy="448" r="3"/>
+<circle class="f" cx="190" cy="448" r="3"/>
+
+<!-- Microphone -->
+<rect class="d" x="230" y="440" width="14" height="22" rx="7"/>
+<path class="d" d="M226 456c0 8 6 14 14 14h0"/>
+<path class="d" d="M258 456c0 8-6 14-14 14"/>
+<line class="d" x1="240" y1="470" x2="240" y2="480"/>
+<line class="d" x1="233" y1="480" x2="247" y2="480"/>
+
+<!-- Mailbox -->
+<path class="d" d="M280 455a10 10 0 0120 0v20h-20z"/>
+<rect class="d" x="300" y="455" width="12" height="20"/>
+<line class="d" x1="280" y1="455" x2="312" y2="455"/>
+<line class="d" x1="296" y1="445" x2="296" y2="455"/>
+<path class="d" d="M296 445l8 4"/>
+
+<!-- Book -->
+<rect class="d" x="340" y="442" width="24" height="32" rx="2"/>
+<line class="d" x1="352" y1="442" x2="352" y2="474"/>
+<path class="d" d="M355 450h6M355 456h6M355 462h6"/>
+
+<!-- Drum -->
+<ellipse class="d" cx="410" cy="450" rx="18" ry="6"/>
+<ellipse class="d" cx="410" cy="470" rx="18" ry="6"/>
+<line class="d" x1="392" y1="450" x2="392" y2="470"/>
+<line class="d" x1="428" y1="450" x2="428" y2="470"/>
+<line class="d" x1="395" y1="448" x2="425" y2="468"/>
+<line class="d" x1="425" y1="448" x2="395" y2="468"/>
+
+<!-- Wine glass -->
+<path class="d" d="M465 440c0 10 5 16 10 18v12"/>
+<path class="d" d="M495 440c0 10-5 16-10 18v12"/>
+<line class="d" x1="465" y1="470" x2="495" y2="470"/>
+<line class="d" x1="465" y1="440" x2="495" y2="440"/>
+<ellipse class="d" cx="480" cy="448" rx="4" ry="3"/>
+
+<!-- Owl -->
+<circle class="d" cx="540" cy="460" r="14"/>
+<circle class="d" cx="534" cy="456" r="5"/>
+<circle class="d" cx="546" cy="456" r="5"/>
+<circle class="f" cx="534" cy="456" r="2.5"/>
+<circle class="f" cx="546" cy="456" r="2.5"/>
+<path class="d" d="M536 465l4 4 4-4"/>
+<path class="d" d="M530 448l-4-6M550 448l4-6"/>
+<path class="d" d="M528 464l-5 3M552 464l5 3"/>
+
+<!-- Dice -->
+<rect class="d" x="585" y="445" width="24" height="24" rx="4"/>
+<circle class="f" cx="593" cy="453" r="2"/>
+<circle class="f" cx="601" cy="457" r="2"/>
+<circle class="f" cx="597" cy="461" r="2"/>
+
+<!-- Lighthouse -->
+<path class="d" d="M650 435h16l-3 40h-10z"/>
+<rect class="d" x="648" y="430" width="20" height="5" rx="1"/>
+<path class="d" d="M652 435l6-8 6 8"/>
+<line class="d" x1="645" y1="475" x2="671" y2="475"/>
+<line class="d" x1="650" y1="450" x2="666" y2="450"/>
+<path class="d" d="M640 432l8 2M676 432l-8 2"/>
+
+<!-- Cherry -->
+<circle class="d" cx="720" cy="465" r="8"/>
+<circle class="d" cx="738" cy="462" r="8"/>
+<path class="d" d="M720 457c0-10 8-18 15-18"/>
+<path class="d" d="M738 454c0-10-3-14 0-18"/>
+
+<!-- Row 8 -->
+<!-- Boat -->
+<path class="d" d="M30 540l10-20h30l10 20z"/>
+<path class="d" d="M25 540c8 6 20 6 30 6s22 0 30-6"/>
+<line class="d" x1="55" y1="520" x2="55" y2="505"/>
+<path class="d" d="M55 510l15 8"/>
+
+<!-- Pretzel -->
+<circle class="d" cx="120" cy="530" r="10"/>
+<circle class="d" cx="138" cy="530" r="10"/>
+<path class="d" d="M120 520c5-8 13-8 18 0"/>
+<path class="d" d="M120 540c5 4 13 4 18 0"/>
+
+<!-- Rainbow -->
+<path class="d" d="M180 545a25 25 0 0150 0"/>
+<path class="d" d="M185 545a20 20 0 0140 0"/>
+<path class="d" d="M190 545a15 15 0 0130 0"/>
+
+<!-- Pinwheel -->
+<circle class="d" cx="275" cy="525" r="3"/>
+<path class="d" d="M275 522c-8-8 0-18 0-18 0 0 8 10 0 18z"/>
+<path class="d" d="M278 525c8-8 18 0 18 0 0 0-10 8-18 0z"/>
+<path class="d" d="M275 528c8 8 0 18 0 18 0 0-8-10 0-18z"/>
+<path class="d" d="M272 525c-8 8-18 0-18 0 0 0 10-8 18 0z"/>
+<line class="d" x1="275" y1="528" x2="275" y2="550"/>
+
+<!-- Walkie talkie -->
+<rect class="d" x="325" y="510" width="18" height="30" rx="3"/>
+<line class="d" x1="325" y1="522" x2="343" y2="522"/>
+<rect class="d" x="329" y="525" width="10" height="3" rx="1"/>
+<rect class="d" x="329" y="530" width="10" height="3" rx="1"/>
+<line class="d" x1="334" y1="505" x2="340" y2="498"/>
+
+<!-- Anchor -->
+<circle class="d" cx="395" cy="515" r="4"/>
+<line class="d" x1="395" y1="519" x2="395" y2="545"/>
+<line class="d" x1="387" y1="528" x2="403" y2="528"/>
+<path class="d" d="M380 540c0-8 7-15 15-15"/>
+<path class="d" d="M410 540c0-8-7-15-15-15"/>
+
+<!-- Jar/honey -->
+<rect class="d" x="440" y="520" width="22" height="24" rx="3"/>
+<rect class="d" x="444" y="514" width="14" height="6" rx="2"/>
+<path class="d" d="M446 530c2-2 5 0 7-2s5 0 7-2"/>
+
+<!-- Guitar -->
+<circle class="d" cx="510" cy="535" r="10"/>
+<circle class="d" cx="510" cy="535" r="3"/>
+<rect class="d" x="507" y="510" width="6" height="18" rx="2"/>
+<line class="d" x1="507" y1="510" x2="513" y2="510"/>
+<line class="d" x1="508" y1="514" x2="508" y2="510"/>
+<line class="d" x1="512" y1="514" x2="512" y2="510"/>
+
+<!-- Snail -->
+<circle class="d" cx="575" cy="535" r="10"/>
+<circle class="d" cx="575" cy="535" r="5"/>
+<path class="d" d="M565 540c-8 0-12 2-15 2"/>
+<circle class="f" cx="558" cy="538" r="1.5"/>
+<path class="d" d="M556 535l-3-5"/>
+<path class="d" d="M560 535l0-6"/>
+
+<!-- Kite -->
+<path class="d" d="M640 510l12 18-12 8-12-8z"/>
+<line class="d" x1="640" y1="536" x2="640" y2="555"/>
+<path class="d" d="M636 545l4 3 4-3"/>
+<line class="d" x1="640" y1="510" x2="640" y2="536"/>
+<line class="d" x1="628" y1="528" x2="652" y2="528"/>
+
+<!-- Crown royal -->
+<rect class="d" x="690" y="525" width="28" height="16" rx="2"/>
+<path class="d" d="M690 525l5-10 4 6 5-8 5 8 4-6 5 10"/>
+<circle class="f" cx="704" cy="533" r="3"/>
+
+<!-- Volcano -->
+<path class="d" d="M752 550l12-30h8l12 30z"/>
+<path class="d" d="M764 520c-2-4 0-8 4-8s6 4 4 8"/>
+<circle class="f" cx="766" cy="510" r="2"/>
+<circle class="f" cx="770" cy="508" r="1.5"/>
+<circle class="f" cx="763" cy="507" r="1"/>
+
+<!-- Scattered dots and small elements to fill gaps -->
+<circle class="f" cx="15" cy="120" r="1.5"/>
+<circle class="f" cx="75" cy="55" r="1.5"/>
+<circle class="f" cx="135" cy="120" r="1.5"/>
+<circle class="f" cx="215" cy="55" r="1.5"/>
+<circle class="f" cx="305" cy="55" r="1.5"/>
+<circle class="f" cx="465" cy="55" r="1.5"/>
+<circle class="f" cx="580" cy="55" r="1.5"/>
+<circle class="f" cx="700" cy="55" r="1.5"/>
+<circle class="f" cx="750" cy="100" r="1.5"/>
+<circle class="f" cx="20" cy="200" r="1.5"/>
+<circle class="f" cx="140" cy="175" r="1.5"/>
+<circle class="f" cx="220" cy="175" r="1.5"/>
+<circle class="f" cx="340" cy="175" r="1.5"/>
+<circle class="f" cx="470" cy="175" r="1.5"/>
+<circle class="f" cx="600" cy="175" r="1.5"/>
+<circle class="f" cx="740" cy="175" r="1.5"/>
+<circle class="f" cx="70" cy="265" r="1.5"/>
+<circle class="f" cx="195" cy="270" r="1.5"/>
+<circle class="f" cx="380" cy="270" r="1.5"/>
+<circle class="f" cx="560" cy="265" r="1.5"/>
+<circle class="f" cx="650" cy="270" r="1.5"/>
+<circle class="f" cx="15" cy="350" r="1.5"/>
+<circle class="f" cx="250" cy="350" r="1.5"/>
+<circle class="f" cx="460" cy="350" r="1.5"/>
+<circle class="f" cx="570" cy="350" r="1.5"/>
+<circle class="f" cx="710" cy="350" r="1.5"/>
+<circle class="f" cx="780" cy="350" r="1.5"/>
+<circle class="f" cx="85" cy="430" r="1.5"/>
+<circle class="f" cx="185" cy="420" r="1.5"/>
+<circle class="f" cx="350" cy="420" r="1.5"/>
+<circle class="f" cx="480" cy="490" r="1.5"/>
+<circle class="f" cx="620" cy="490" r="1.5"/>
+<circle class="f" cx="760" cy="490" r="1.5"/>
+
+<!-- Extra small stars scattered -->
+<path class="f" d="M80 130l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M200 110l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M360 60l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M530 130l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M680 135l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M120 260l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M420 265l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M760 265l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M170 350l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M550 440l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+<path class="f" d="M300 490l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z"/>
+
+<!-- Extra small hearts scattered -->
+<path class="f" d="M315 130c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+<path class="f" d="M500 105c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+<path class="f" d="M640 210c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+<path class="f" d="M180 430c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+<path class="f" d="M430 500c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+<path class="f" d="M700 430c0-3 4-4 5 0 1-4 5-3 5 0 0 4-5 7-5 7s-5-3-5-7z"/>
+
+<!-- Small X marks -->
+<path class="d" d="M30 55l5 5M35 55l-5 5"/>
+<path class="d" d="M165 55l5 5M170 55l-5 5"/>
+<path class="d" d="M410 110l5 5M415 110l-5 5"/>
+<path class="d" d="M225 260l5 5M230 260l-5 5"/>
+<path class="d" d="M690 260l5 5M695 260l-5 5"/>
+<path class="d" d="M90 350l5 5M95 350l-5 5"/>
+<path class="d" d="M340 350l5 5M345 350l-5 5"/>
+<path class="d" d="M660 500l5 5M665 500l-5 5"/>
+
+<!-- Plus signs -->
+<path class="d" d="M430 55v8M426 59h8"/>
+<path class="d" d="M625 110v8M621 114h8"/>
+<path class="d" d="M75 175v8M71 179h8"/>
+<path class="d" d="M490 260v8M486 264h8"/>
+<path class="d" d="M600 345v8M596 349h8"/>
+<path class="d" d="M260 425v8M256 429h8"/>
+<path class="d" d="M130 500v8M126 504h8"/>
+<path class="d" d="M770 520v8M766 524h8"/>
+
+</svg>

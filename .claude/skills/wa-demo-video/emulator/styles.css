@@ -1,0 +1,831 @@
+/* ================================================================
+   WhatsApp Emulator — Pixel-Perfect Android Dark Mode 2025
+   Senior Meta UI Engineer Edition
+   ================================================================ */
+
+:root {
+  /* ── WhatsApp Dark Mode Palette (2025) ── */
+  --wa-bg-deep:       #0b141a;
+  --wa-bg-chat:       #0b141a;
+  --wa-header-bg:     #1f2c34;
+  --wa-input-row-bg:  #0b141a;
+
+  --wa-text-primary:  #e9edef;
+  --wa-text-secondary:#8696a0;
+  --wa-text-muted:    rgba(255,255,255,0.45);
+
+  --wa-accent:        #00a884;
+  --wa-accent-hover:  #00bf96;
+  --wa-accent-pressed:#008f72;
+  --wa-online-green:  #25d366;
+
+  --wa-msg-sent:      #005c4b;
+  --wa-msg-sent-hover:#00503f;
+  --wa-msg-rcvd:      #202c33;
+  --wa-msg-rcvd-hover:#1b2630;
+
+  --wa-msg-meta:      rgba(255,255,255,0.55);
+  --wa-read-tick:     #53bdeb;
+
+  --wa-input-bg:      #2a3942;
+  --wa-icon-color:    #8696a0;
+  --wa-icon-active:   #e9edef;
+
+  --wa-notice-bg:     rgba(19,28,33,0.92);
+  --wa-notice-text:   #8e9da7;
+  --wa-notice-link:   #53bdeb;
+
+  --wa-border:        rgba(134,150,160,0.08);
+
+  /* ── Frame ── */
+  --frame-bg:         #0f0f0f;
+  --frame-border:     #1e1e1e;
+  --frame-radius:     44px;
+  --frame-width:      375px;
+  --frame-height:     min(812px, calc(100vh - 40px));
+}
+
+/* ───── Reset ───── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0a0a;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0,168,132,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(0,92,75,0.03) 0%, transparent 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--wa-text-primary);
+  overflow: hidden;
+}
+
+/* ───── Phone Frame (Desktop) ───── */
+.wa-phone-frame {
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background-color: var(--wa-bg-deep);
+  border-radius: var(--frame-radius);
+  border: 8px solid var(--frame-border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04),
+    0 4px 16px rgba(0,0,0,0.3),
+    0 12px 40px rgba(0,0,0,0.4),
+    0 24px 80px rgba(0,0,0,0.5);
+}
+
+/* Top notch/camera cutout (Android punch-hole) */
+.wa-phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  z-index: 100;
+  border: 1.5px solid #222;
+}
+
+/* Mobile: fullscreen, no frame */
+@media (max-width: 440px) {
+  body {
+    background: var(--wa-bg-deep);
+  }
+
+  .wa-phone-frame {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .wa-phone-frame::before {
+    display: none;
+  }
+}
+
+/* ───── Android Status Bar ───── */
+.wa-status-bar {
+  height: 32px;
+  background-color: var(--wa-bg-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.wa-status-bar-left,
+.wa-status-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wa-status-time {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.wa-status-icon-small {
+  opacity: 0.85;
+  width: 13px;
+  height: 13px;
+}
+
+.wa-status-icon {
+  opacity: 0.85;
+  width: 14px;
+  height: 14px;
+}
+
+.wa-status-text {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+/* Battery Icon — refined */
+.wa-battery-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.wa-battery-body {
+  width: 14px;
+  height: 8px;
+  border: 1.5px solid rgba(255,255,255,0.85);
+  border-radius: 2px;
+  padding: 1px;
+  position: relative;
+}
+
+.wa-battery-fill {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.5px;
+  transition: width 0.3s ease;
+}
+
+.wa-battery-tip {
+  width: 2px;
+  height: 4px;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 0 1px 1px 0;
+  margin-left: 0.5px;
+}
+
+/* ───── WhatsApp Header ───── */
+.wa-header {
+  height: 56px;
+  background-color: var(--wa-header-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 0 2px;
+  z-index: 15;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--wa-border);
+}
+
+.wa-header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-icon-btn {
+  background: none;
+  border: none;
+  color: var(--wa-icon-active);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.wa-icon-btn:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
+.wa-icon-btn:active {
+  background-color: rgba(255,255,255,0.12);
+}
+
+.wa-back-btn {
+  margin-right: -2px;
+  width: 36px;
+  height: 40px;
+}
+
+.wa-back-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Header Avatar */
+.wa-header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 10px 0 2px;
+  overflow: hidden;
+  background-color: #3b4a54;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.wa-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Header Info */
+.wa-header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  gap: 1px;
+}
+
+.wa-header-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--wa-text-primary);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wa-header-status {
+  font-size: 12.5px;
+  color: var(--wa-text-secondary);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.wa-header-status.online {
+  color: var(--wa-text-secondary);
+}
+
+.wa-header-status.typing {
+  color: var(--wa-text-secondary);
+}
+
+/* Header Actions */
+.wa-header-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.wa-header-actions .wa-icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ───── Chat Area ───── */
+.wa-chat {
+  flex: 1;
+  background-color: var(--wa-bg-chat);
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 6px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar — ultra thin, WA-style */
+.wa-chat::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wa-chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wa-chat::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.12);
+  border-radius: 4px;
+}
+
+.wa-chat::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* ── WhatsApp Doodle Pattern ── */
+.wa-chat::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('doodle-dark.svg');
+  background-size: 260px auto;
+  background-repeat: repeat;
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ───── Encryption Notice ───── */
+.wa-encryption-notice {
+  background-color: var(--wa-notice-bg);
+  color: var(--wa-notice-text);
+  font-size: 12.5px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 4px auto 8px;
+  max-width: 95%;
+  line-height: 1.45;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.01em;
+}
+
+.wa-encryption-notice strong {
+  color: var(--wa-notice-link);
+  font-weight: 400;
+}
+
+.wa-encryption-notice .encrypt-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-top: -1px;
+  opacity: 0.7;
+}
+
+/* ───── Date Separator ───── */
+.wa-date-separator {
+  align-self: center;
+  background-color: var(--wa-notice-bg);
+  color: var(--wa-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ───── Messages ───── */
+.message-row {
+  display: flex;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  animation: msgAppear 0.22s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes msgAppear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-row.sent {
+  justify-content: flex-end;
+}
+
+.message-row.received {
+  justify-content: flex-start;
+}
+
+/* Spacing between different senders */
+.message-row.sent + .message-row.received,
+.message-row.received + .message-row.sent {
+  margin-top: 4px;
+}
+
+/* ── Message Bubble ── */
+.message-bubble {
+  max-width: 85%;
+  padding: 6px 7px 8px 9px;
+  border-radius: 7.5px;
+  position: relative;
+  font-size: 14.2px;
+  line-height: 19px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 1px 0.5px rgba(11,20,26,0.13);
+}
+
+/* Received Bubble */
+.message-row.received .message-bubble {
+  background-color: var(--wa-msg-rcvd);
+  color: var(--wa-text-primary);
+}
+
+/* Sent Bubble */
+.message-row.sent .message-bubble {
+  background-color: var(--wa-msg-sent);
+  color: var(--wa-text-primary);
+  padding: 6px 7px 8px 9px;
+}
+
+/* ── Tails ── */
+.message-row.received.has-tail .message-bubble {
+  border-top-left-radius: 0;
+}
+
+.message-row.received.has-tail .message-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 13px;
+  background: var(--wa-msg-rcvd);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.message-row.sent.has-tail .message-bubble {
+  border-top-right-radius: 0;
+}
+
+.message-row.sent.has-tail .message-bubble::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 8px;
+  height: 13px;
+  background: var(--wa-msg-sent);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* ── Message Meta (Time + Checks) ── */
+.message-meta {
+  display: inline-flex;
+  align-items: center;
+  float: right;
+  margin: 0 -4px -5px 12px;
+  height: 15px;
+  gap: 3px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: var(--wa-msg-meta);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.message-row.sent .message-time {
+  color: rgba(255,255,255,0.55);
+}
+
+.message-checks {
+  display: flex;
+  color: var(--wa-msg-meta);
+  margin-top: 1px;
+}
+
+.message-checks svg {
+  width: 16px;
+  height: 11px;
+}
+
+.message-checks.read {
+  color: var(--wa-read-tick);
+}
+
+/* ───── Typing Indicator ───── */
+.typing-indicator {
+  align-self: flex-start;
+  background-color: var(--wa-msg-rcvd);
+  padding: 10px 16px;
+  border-radius: 7.5px;
+  border-top-left-radius: 0;
+  margin-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 1px 0.5px rgba(11,20,26,0.13);
+  position: relative;
+  z-index: 1;
+  animation: msgAppear 0.22s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+/* Typing tail */
+.typing-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 13px;
+  background: var(--wa-msg-rcvd);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.typing-bubble {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 14px;
+}
+
+.typing-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--wa-text-secondary);
+  border-radius: 50%;
+  animation: typingPulse 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingPulse {
+  0%, 60%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ───── Input Row ───── */
+.wa-input-row {
+  background-color: var(--wa-input-row-bg);
+  position: relative;
+  padding: 5px 6px 6px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+/* Continue doodle pattern behind input */
+.wa-input-row::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('doodle-dark.svg');
+  background-size: 260px auto;
+  background-repeat: repeat;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Input Pill */
+.wa-input-box {
+  flex: 1;
+  background-color: var(--wa-input-bg);
+  border-radius: 21px;
+  display: flex;
+  align-items: flex-end;
+  padding: 4px 4px 4px 6px;
+  min-height: 42px;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.15s ease;
+}
+
+.wa-input-icon {
+  background: none;
+  border: none;
+  color: var(--wa-icon-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.wa-input-icon:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.wa-input-icon:active {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.wa-input-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.wa-emoji-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Textarea */
+textarea#messageInput {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--wa-text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 8px 2px;
+  max-height: 100px;
+  resize: none;
+  outline: none;
+  min-height: 36px;
+}
+
+textarea#messageInput::placeholder {
+  color: var(--wa-text-secondary);
+  font-size: 15px;
+}
+
+/* Camera Button — smooth hide */
+.wa-camera-btn {
+  transition: opacity 0.15s ease, width 0.15s ease, padding 0.15s ease;
+}
+
+.wa-camera-btn.hidden {
+  opacity: 0;
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Action Button (Mic / Send) ── */
+.wa-action-btn {
+  background-color: var(--wa-accent);
+  color: #fff;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.wa-action-btn:hover {
+  background-color: var(--wa-accent-hover);
+}
+
+.wa-action-btn:active {
+  transform: scale(0.93);
+  background-color: var(--wa-accent-pressed);
+}
+
+.wa-action-btn svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Mic ↔ Send crossfade */
+.wa-action-btn .mic-icon {
+  position: absolute;
+}
+
+.wa-action-btn .send-icon {
+  position: absolute;
+}
+
+.wa-action-btn .mic-icon.hidden {
+  opacity: 0;
+  transform: scale(0.7) rotate(-30deg);
+}
+
+.wa-action-btn .send-icon.hidden {
+  opacity: 0;
+  transform: scale(0.7) rotate(30deg);
+}
+
+.wa-action-btn .mic-icon.visible,
+.wa-action-btn .send-icon.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* ───── Android Navigation Bar (Gesture Bar — Android 14+) ───── */
+.wa-nav-bar {
+  height: 28px;
+  background-color: var(--wa-bg-deep);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  flex-shrink: 0;
+  padding-bottom: 4px;
+}
+
+.wa-gesture-bar {
+  width: 134px;
+  height: 5px;
+  background-color: rgba(255,255,255,0.35);
+  border-radius: 100px;
+}
+
+/* Legacy 3-button nav (hidden by default, kept for flexibility) */
+.wa-nav-btn {
+  display: none;
+  color: #666;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.wa-nav-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #666;
+}
+
+/* ───── Config Status Toast ───── */
+.config-status {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  z-index: 100;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.config-success {
+  border: 1px solid var(--wa-accent);
+  color: var(--wa-accent);
+}
+
+.config-error {
+  border: 1px solid #ef5350;
+  color: #ef5350;
+}

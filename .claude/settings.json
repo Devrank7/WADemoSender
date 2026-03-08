@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/devlink007/WADemoSender/.claude/hooks/notify-progress.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/devlink007/WADemoSender/.claude/hooks/notify-complete.sh",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env.local
+service_account.json
+.playwright-mcp/
+output/
+.server.pid
+*.pid
