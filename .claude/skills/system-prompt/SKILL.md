@@ -44,7 +44,10 @@ System Prompt column will be auto-created if missing.
 If validation fails — tell user which columns are missing.
 If passes — show stats, detected platform, and ask: "Готово. Начинаю исследование лидов и генерацию системных промтов?"
 
-## Phase 3: RESEARCH & GENERATION
+## Phase 3: PARALLEL RESEARCH & GENERATION
+
+**This skill uses parallel sub-agents to research multiple leads simultaneously (3 at a time).**
+Research is the bottleneck — each lead requires multiple WebFetch/WebSearch calls. Parallelizing saves 3-5x time.
 
 **Step 1:** Get the list of leads without system prompts:
 
@@ -52,15 +55,45 @@ If passes — show stats, detected platform, and ask: "Готово. Начин�
 python3 /Users/devlink007/DemoSender/.claude/skills/system-prompt/scripts/generate_prompts.py list-pending <SPREADSHEET_ID>
 ```
 
-**Step 2:** For EACH pending lead, repeat steps 2a–2e:
+**Step 2:** Split pending leads into batches of 3.
 
-**Step 2a:** Get the row data:
+**Step 3:** For each batch, spawn **3 parallel Task agents** (one per lead) in a single message with 3 tool calls. Use `subagent_type: "general-purpose"` for each.
 
-```bash
-python3 /Users/devlink007/DemoSender/.claude/skills/system-prompt/scripts/generate_prompts.py get-row <SPREADSHEET_ID> <ROW>
+**Sub-agent prompt template** (fill in SPREADSHEET_ID and ROW for each):
+
+```text
+Research one lead and generate a personalized AI assistant system prompt.
+
+SPREADSHEET: {SPREADSHEET_ID}
+ROW: {ROW_NUMBER}
+SCRIPT: /Users/devlink007/DemoSender/.claude/skills/system-prompt/scripts/generate_prompts.py
+
+Steps:
+1. Get lead data:
+   python3 {SCRIPT} get-row {SPREADSHEET_ID} {ROW_NUMBER}
+2. Research the lead thoroughly (see research instructions below).
+3. Generate the system prompt following the structure guidelines below.
+4. Save:
+   python3 {SCRIPT} save-prompt {SPREADSHEET_ID} {ROW_NUMBER} --file /tmp/prompt_row{ROW_NUMBER}.txt
+5. Return summary: "Row {ROW_NUMBER}: {business_name} - done ({X} chars, {Y} services found, platform: {IG/WA})"
 ```
 
-**Step 2b:** Research the lead thoroughly.
+**Step 4:** Wait for all 3 agents to complete. Print batch summary.
+
+**Step 5:** Move to next batch. Repeat steps 3-4 until all leads are processed.
+
+**Step 6:** After all batches complete, proceed to Phase 4 (reporting).
+
+**IMPORTANT:**
+- Each sub-agent works independently and saves its own prompt directly to the sheet.
+- If a sub-agent fails or can't find enough info, it should skip and report "skipped."
+- NEVER overwrite an existing system prompt (only fill empty ones).
+- The process is resumable: re-running `list-pending` only shows rows still missing prompts.
+- ALWAYS ask user for confirmation before starting.
+
+---
+
+### Research Instructions (included in sub-agent prompt)
 
 ### Research for INSTAGRAM leads (IG mode)
 
@@ -106,7 +139,7 @@ python3 /Users/devlink007/DemoSender/.claude/skills/system-prompt/scripts/genera
 
 **IMPORTANT: The website is the PRIMARY research source for WhatsApp leads.** Dig into every page. The more comprehensive the system prompt, the better the AI assistant will perform.
 
-**Step 2c:** Generate the system prompt.
+### Generate the system prompt
 
 Based on ALL gathered information, write a comprehensive system prompt. The prompt structure adapts to the platform:
 

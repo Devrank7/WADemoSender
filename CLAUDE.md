@@ -45,6 +45,8 @@ WADemoSender/
 
 Researches each lead's website, social media, services, prices. Generates a detailed AI assistant system prompt. Works for B2B coaches, consultants, infobusiness.
 
+**Parallel processing:** Sub-agent architecture (3 leads at a time) for faster research.
+
 Script: `generate_prompts.py` — commands: `validate`, `list-pending`, `get-row`, `save-prompt`, `report`
 
 ### `/create-wa-message` — WhatsApp Message Generation
@@ -53,9 +55,9 @@ Generates personalized WhatsApp cold outreach messages (video + caption format).
 
 Targets: coaches, consultants, infobusiness in Brazil, Ireland, Portugal, Colombia, Mexico.
 
-Key rules: 30-70 words (80 hard limit), casual tone, "already built for you" reciprocity, loss aversion, low-friction CTA, "AI assistant" only product name.
+Key rules: 30-50 words ideal (70 hard limit), signal-anchored personalization, "already built for you" reciprocity, loss aversion, low-friction CTA, "AI assistant" only product name. Target: 30% reply rate.
 
-**Parallel processing:** Sub-agent architecture. Rules in `RULES.md`.
+**Parallel processing:** Sub-agent architecture. Core rules in `RULES.md`, detailed references in `references/` (architectures, anti-fingerprinting, language guides).
 
 Script: `generate_messages.py` — commands: `validate`, `list-pending`, `get-row`, `save-message`, `save-followup`, `report`
 
@@ -79,14 +81,17 @@ Sends via Whapi.cloud REST API with multi-account rotation and comprehensive ant
 Message types: text-only or video + caption (single WhatsApp bubble).
 
 **Anti-ban protection:**
-- Up to 10 Whapi channels with round-robin rotation
+- Up to 10 Whapi channels with round-robin rotation + geographic matching
 - Gaussian delays: 45-180s same account, 20-45s switch
 - Batch breaks: every 5-8 messages, 8-20 min pause
-- Activity windows (BRT): weekday 08:30-19:30, Saturday 09:00-12:00, no Sunday
+- Timezone-aware activity windows (BRT/IST/COT/CST/WET per recipient country)
 - Block rate monitoring: >10% = emergency stop
+- Reply rate monitoring: target 30%, alert if <15%
 - Typing simulation: 2-6 seconds "typing..." indicator
+- Number warm-up schedule: 3-10 day gradual ramp
+- Feedback loop: session results logged to `output/wa_outreach_log.json`
 
-Limits: 60/channel/day (80 hard cap).
+Limits: 60/channel/day (80 hard cap). Max 2 msg/min (Whapi.cloud recommendation).
 
 Script: `send_wa.py` — commands: `validate`, `send`, `dry-run`, `report`. Flag: `--live-notify`
 
@@ -126,6 +131,6 @@ Sheet must be shared with `aisheets@aisheets-486216.iam.gserviceaccount.com` (Ed
 - Never commit `.env.local` or `service_account.json`
 - Scripts are idempotent — safe to re-run
 - Cold messages must pass anti-AI detection
-- Activity windows are in Brazil time (BRT = UTC-3)
+- Activity windows are timezone-aware per recipient country (BRT/IST/COT/CST/WET)
 - Video URLs must be direct file links (not Loom share pages)
 - Phone numbers auto-normalized to international format

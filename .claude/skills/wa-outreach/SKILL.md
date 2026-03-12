@@ -85,7 +85,7 @@ Sends Telegram notification every 10 messages.
 
 ## Anti-Ban Engine (Built Into Script)
 
-The script implements the most comprehensive anti-ban protection available. Here's what it does:
+The script implements comprehensive anti-ban protection based on Whapi.cloud's official recommendations and 2026 best practices. **Target: 30% reply rate** — Whapi.cloud's own documentation states that accounts should aim for at least 30 replies per 100 messages sent.
 
 ### 1. Account Rotation
 
@@ -107,56 +107,106 @@ Multiple Whapi.cloud channels are configured in `.env.local`. The script:
 
 **Batch breaks:**
 - After every 5–8 messages (random batch size), pause for 8–20 minutes
-- This mimics "check phone → reply to a few chats → put phone down" behavior
+- This mimics "check phone -> reply to a few chats -> put phone down" behavior
 
-**Activity hours (Brazil time / BRT = UTC-3):**
+**Whapi.cloud hard limit: max 2 messages per minute, max 6 hours per day, max 3 consecutive days.**
+
+### 3. Timezone-Aware Activity Windows
+
+Activity windows adapt to the RECIPIENT'S timezone based on their country code:
+
+**Brazil (BRT = UTC-3) — country code +55:**
 - Morning window: 08:30–11:30 BRT
 - Lunch window: 12:30–14:00 BRT
 - Evening window: 17:00–19:30 BRT
-- Script pauses if outside these windows (waits until next window opens)
-- **Weekend sending:** Saturday 09:00-12:00 only. NO Sunday sending.
+- Saturday: 09:00–12:00 only. NO Sunday sending.
 
-### 3. Typing Simulation
+**Ireland (IST = UTC+0/+1) — country code +353:**
+- Morning window: 09:00–12:00 IST
+- Afternoon window: 13:30–15:00 IST
+- Evening window: 17:00–19:00 IST
+- NO weekend sending.
+
+**Colombia (COT = UTC-5) — country code +57:**
+- Morning window: 08:30–11:30 COT
+- Lunch window: 12:30–14:00 COT
+- Evening window: 16:30–19:00 COT
+- Saturday: 09:00–12:00 only. NO Sunday sending.
+
+**Mexico (CST = UTC-6) — country code +52:**
+- Morning window: 08:30–11:30 CST
+- Lunch window: 12:30–14:00 CST
+- Evening window: 17:00–19:30 CST
+- Saturday: 09:00–12:00 only. NO Sunday sending.
+
+**Portugal (WET = UTC+0/+1) — country code +351:**
+- Morning window: 09:00–12:00 WET
+- Lunch window: 13:00–14:30 WET
+- Evening window: 17:00–19:30 WET
+- Saturday: 09:30–12:00 only. NO Sunday sending.
+
+Script auto-detects country from phone number prefix and pauses if outside windows. If a batch contains mixed countries, it sorts by timezone and sends within each country's active window.
+
+### 4. Typing Simulation
 
 Before each message, the script calls Whapi.cloud's `typingTime` parameter:
 - Types for 2–6 seconds (proportional to message length)
 - Recipient sees "typing..." indicator before message arrives
 - Makes messages indistinguishable from human-sent ones
 
-### 4. Daily Limits
+### 5. Number Warm-Up Schedule
 
-**Default: 60 messages per account per day.**
+**New numbers MUST be warmed up before bulk sending.** Whapi.cloud recommends 3-10 days.
 
-User CAN override with `--limit N`. Hard caps:
-
-| Account Age | Hard Cap | Recommended |
-|-------------|----------|-------------|
-| Week 1 (warmup) | 15 | 10 |
-| Week 2 (warmup) | 30 | 20 |
-| Week 3 (warmup) | 50 | 35 |
-| Week 4+ (warmed) | 80 | 60 |
+| Day | Max Messages | Activities |
+|-----|-------------|------------|
+| Day 0 | 0 | Setup profile, add 20-50 contacts, send 1-2 test messages manually |
+| Day 1 | 5 | 3-6 private conversations, varied messages with media |
+| Day 2 | 15 | 10-15 chats, 1 msg/min max, varied content |
+| Day 3 | 25 | Gradually increase, join groups, add status updates |
+| Day 4-6 | 35 | Active group participation, links, longer messages |
+| Day 7+ | 50 | Near-full capacity with content diversification |
+| Day 14+ | 60 | Full capacity (recommended limit) |
 
 **HARD ABSOLUTE CAP: 80 messages per account per day. NEVER exceed.**
 
 If user requests >80, REFUSE:
 "Я не могу отправить больше 80 сообщений с одного аккаунта в сутки — WhatsApp заблокирует номер. Максимальный безопасный лимит — 60 сообщений для прогретого аккаунта."
 
-### 5. Block Rate Monitoring
+### 6. Geographic Matching
+
+**Whapi.cloud recommendation: avoid bulk sending to users in a different country from where the number is registered.**
+
+WhatsApp flags accounts that have many contacts in countries where the number is not physically located. For maximum safety:
+- Use Brazilian numbers (+55) for Brazilian leads
+- Use Irish numbers (+353) for Irish leads
+- Use Colombian numbers (+57) for Colombian leads
+- Use Mexican numbers (+52) for Mexican leads
+
+The script should prefer geographic matching when multiple channels are available. If a Brazilian channel and an Irish channel are both configured, route Brazilian leads to the Brazilian channel.
+
+### 7. Block Rate Monitoring
 
 The script tracks blocks/reports via Whapi.cloud webhooks (if configured) or estimates based on delivery failures:
 
-- **Block rate < 5%** → GREEN. Normal operation.
-- **Block rate 5-10%** → YELLOW. Reduce sending speed by 50%. Add 30 sec to all delays.
-- **Block rate > 10%** → RED. **EMERGENCY STOP.** Pause this account for 24 hours. Send Telegram alert.
+- **Block rate < 5%** -> GREEN. Normal operation.
+- **Block rate 5-10%** -> YELLOW. Reduce sending speed by 50%. Add 30 sec to all delays.
+- **Block rate > 10%** -> RED. **EMERGENCY STOP.** Pause this account for 24 hours. Send Telegram alert.
 
-### 6. Content Variation
+**Reply rate monitoring (NEW):**
+- **Reply rate > 30%** -> EXCELLENT. Account health is strong.
+- **Reply rate 15-30%** -> OK. Monitor closely.
+- **Reply rate < 15%** -> WARNING. Message quality may need improvement. Log to Telegram.
+- **Reply rate < 5%** -> CRITICAL. Pause and review message strategy.
+
+### 8. Content Variation
 
 Even though messages come pre-written from `create-wa-message`, the script adds micro-variations:
 - Random punctuation normalization (period vs no period at end)
 - Unicode zero-width spaces between some words (invisible but makes messages "unique" to WhatsApp hash)
 - Optional: prepend or append a single space or newline
 
-### 7. Video+Caption Mode (Video-First)
+### 9. Video+Caption Mode (Video-First)
 
 When the sheet has a **WhatsApp Demo** column with a direct video file URL, the script automatically switches to video mode:
 - Sends the message as **video+caption** via Whapi.cloud's `messages/video` endpoint
@@ -168,13 +218,36 @@ When the sheet has a **WhatsApp Demo** column with a direct video file URL, the 
 - Video mode is detected automatically — no flags needed
 - Anti-ban protections (typing simulation, delays, rotation) apply identically to both modes
 
-### 8. Phone Number Formatting
+### 10. Phone Number Formatting
 
 The script auto-normalizes phone numbers:
 - Strips spaces, dashes, parentheses
-- Ensures country code prefix (default: +55 for Brazil, +353 for Ireland, +52 for Mexico)
+- Ensures country code prefix (default: +55 for Brazil, +353 for Ireland, +52 for Mexico, +57 for Colombia, +351 for Portugal)
 - Validates number length for each country
 - Formats as `5511999990000@s.whatsapp.net` for Whapi.cloud API
+
+### 11. Feedback Loop — Outreach Results Tracking
+
+After each sending session, the script logs results to `output/wa_outreach_log.json`:
+
+```json
+{
+  "session_id": "2026-03-11T14:30:00",
+  "total_sent": 45,
+  "delivered": 43,
+  "failed": 2,
+  "replies_received": 14,
+  "reply_rate": 32.5,
+  "blocks_reported": 1,
+  "block_rate": 2.3,
+  "by_architecture": {"arch_1": 6, "arch_2": 5, ...},
+  "by_loss_angle": {"angle_1": 8, "angle_2": 7, ...},
+  "by_country": {"BR": 30, "IE": 10, "CO": 5},
+  "by_channel": {"channel_1": 23, "channel_2": 22}
+}
+```
+
+This data feeds back into `create-wa-message` to identify which architectures and loss angles produce the highest reply rates, enabling continuous optimization toward the 30% target.
 
 ## Phase 4: REPORTING — Send Telegram report
 

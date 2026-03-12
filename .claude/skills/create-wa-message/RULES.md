@@ -1,6 +1,11 @@
-# WhatsApp Cold Outreach Rules — B2B Prospects
+# WhatsApp Cold Outreach Rules — B2B Prospects (v2 — Optimized for 30% Reply Rate)
 
 These rules govern EVERY WhatsApp message you generate. Follow ALL of them.
+
+For detailed reference on specific topics, see:
+- `references/architectures.md` — 8 message architectures with selection matrix
+- `references/anti-fingerprinting.md` — WhatsApp ML detection avoidance
+- `references/language-guides.md` — PT/EN/ES cultural and language guidelines
 
 ---
 
@@ -18,6 +23,48 @@ We always record a demo video showing the AI assistant in action on their site. 
 The `demo` column (optional) contains a link to the live website demo where the prospect can interact with the AI assistant themselves.
 
 **CRITICAL: Every message must make the prospect FEEL that something was built specifically for THEM. This is the #1 conversion driver.**
+
+---
+
+## THE 30% REPLY RATE FRAMEWORK
+
+Research shows that achieving 30%+ reply rates on WhatsApp cold outreach requires three pillars working together:
+
+### Pillar 1: Signal-Anchored Personalization
+Generic personalization ("Hi [Name], I saw your coaching business") gets 3-5% replies. Signal-anchored personalization — referencing a SPECIFIC business event, detail, or gap you actually observed — gets 15-30%.
+
+**What counts as a signal:**
+- A specific service from their website ("your executive leadership program")
+- A specific gap you observed ("no chat widget on the pricing page")
+- Their content/social media activity ("your post about scaling past 6 figures")
+- Their tech stack or tools visible on their site
+- Recent changes (new website, new program, expanded team)
+
+**The rule:** Every message must reference at least ONE signal-anchored detail that proves you researched THIS specific business. Not their niche — THEIR business.
+
+### Pillar 2: Pre-Built Demo as Social Proof
+Our demo video is not just a pitch — it's a proof of effort. Research shows visible effort (the "effort heuristic") dramatically increases perceived value. The video shows we actually spent time on THEIR business.
+
+### Pillar 3: Low-Friction Engagement
+The CTA must require near-zero effort to respond. "Have a look and tell me what you think" is 3x more effective than "Can we schedule a call?" because it only requires an opinion, not a commitment.
+
+---
+
+## VIDEO-FIRST vs TEXT-FIRST: THE EVIDENCE
+
+**Research conclusion: Video+caption in the first message IS the right approach for our use case.** Here's why:
+
+1. **Personalized video outreach shows 200-300% higher reply rates** vs text-only in B2B contexts (Sendspark, Salesmotion 2026 data)
+2. **Our video is hyper-personalized** — it shows the AI working on THEIR specific site with THEIR services. This is NOT a generic demo reel.
+3. **The video proves effort** — the prospect can SEE we invested time in them specifically
+4. **WhatsApp video renders inline** — the prospect sees the thumbnail immediately, creating curiosity
+
+**The risk:** Sending a video from an unknown number CAN feel heavy. We mitigate this by:
+- Keeping the caption SHORT (30-50 words ideal) so it doesn't feel like a sales pitch
+- Leading with the PAIN/LOSS, not the video — the caption creates urgency, the video delivers proof
+- Using Tier 1 CTAs that ask for a REACTION to what they already see, not permission to send more
+
+**IMPORTANT:** The caption frames WHY they should watch. The video shows WHAT we built. Together they create an irresistible package: "someone built something for MY business and I can see it right here."
 
 ---
 
@@ -61,9 +108,9 @@ The single most powerful element in our messages. When someone builds something 
 **RULE: Never use the same loss scenario for two consecutive leads in a batch.** This forces message diversity.
 
 **Weak gain hooks (AVOID — they do NOT create urgency):**
-- ❌ "Some coaches are using AI to get more clients" — about OTHERS gaining, not about HIM losing
-- ❌ "AI can help you grow your business" — vague gain, no emotional punch
-- ❌ "Automate your lead qualification" — tech jargon, no human story
+- "Some coaches are using AI to get more clients" — about OTHERS gaining, not about HIM losing
+- "AI can help you grow your business" — vague gain, no emotional punch
+- "Automate your lead qualification" — tech jargon, no human story
 
 **WARNING — NEGATIVE SOCIAL PROOF:**
 NEVER say "most coaches don't reply fast enough." This normalizes the problem.
@@ -74,9 +121,12 @@ NEVER say "most coaches don't reply fast enough." This normalizes the problem.
 
 WhatsApp truncates at ~5 lines with "Read more". The FULL message must be visible on a phone lock screen notification.
 
-- **Target: 30-70 words. Hard limit: 80 words.**
-- When mentioning both site AND WhatsApp, budget is tighter — keep to 50-70 words
+- **Target: 30-50 words for video+caption. Hard limit: 70 words.**
+- Shorter captions with attached video perform BETTER than longer ones
+- When mentioning both site AND WhatsApp, budget is tighter — keep to 40-55 words
 - Count lines visually: each line ~ 40-45 characters on mobile
+
+**WHY shorter works better in 2026:** Whapi.cloud's own data recommends aiming for 30% response rate. Shorter messages feel conversational, not like a pitch. The video does the heavy lifting — the caption just needs to create context and curiosity.
 
 ---
 
@@ -115,13 +165,11 @@ Every message ends with a question that requires minimal effort to answer. This 
 
 **Always use Tier 1 or Tier 2. Never Tier 3.**
 
-**WHY this CTA works:** The demo is already in their hands (attached video). We're not asking them to go somewhere or accept something — we're asking for their REACTION to what they can already see. This lowers friction to near-zero: they watch, they reply.
-
 ---
 
-## RULE 6: Specificity Over Buzzwords
+## RULE 6: Signal-Anchored Specificity (NOT Generic Personalization)
 
-Replace every generic word with something specific to THEIR business:
+This is the single biggest upgrade from generic outreach to 30% reply rate. Replace every generic word with a SIGNAL from THEIR business:
 
 | NEVER say | SAY instead (using their company_info) |
 |-----------|---------------------------------------|
@@ -130,6 +178,12 @@ Replace every generic word with something specific to THEIR business:
 | "increase leads" | "responde quem chega no seu site as 23h procurando [mentoria]" |
 | "our product" | "o que montei pro [mariasantos.com.br]" |
 | "automation" / "automacao" | "funciona 24h", "responde sozinho", "agenda automaticamente" |
+
+**Signal-anchored specificity examples:**
+- WEAK: "I built an AI for your coaching site" (generic — could be anyone's coaching site)
+- STRONG: "I built an AI for your site that knows your executive leadership program pricing and books discovery calls" (signal: specific program name from their website)
+- WEAK: "Your site visitors don't get answered at night" (generic pain)
+- STRONG: "When someone visits mariasantos.com.br at 11pm wanting to know about your 12-week transformation program... no one answers" (signal: specific URL + specific program)
 
 ---
 
@@ -162,7 +216,7 @@ Every message is sent as video+caption (the video is attached automatically from
 
 **Pattern:**
 ```
-[Loss scenario or personalized observation] +
+[Loss scenario or signal-anchored observation] +
 "Montei um assistente AI pro seu [site] que [specific function]
 e tambem configurei pro WhatsApp — [specific WhatsApp function]." +
 [Video-first CTA: "da uma olhada e me fala o que achou"]
@@ -176,7 +230,7 @@ e tambem configurei pro WhatsApp — [specific WhatsApp function]." +
 
 **Pattern:**
 ```
-[Loss scenario or personalized observation] +
+[Loss scenario or signal-anchored observation] +
 "Montei um assistente AI pro seu [site/WhatsApp] que [specific function]." +
 [Softer CTA: "posso te mandar o link pra voce testar ao vivo" / "we can send the demo link anytime if you're interested"]
 ```
@@ -200,7 +254,7 @@ e tambem configurei pro WhatsApp — [specific WhatsApp function]." +
 
 | Category | BANNED | Use instead |
 |----------|--------|-------------|
-| Punctuation | em dash (—) | ... or comma or period |
+| Punctuation | em dash (-) | ... or comma or period |
 | Punctuation | semicolons (;) | period. Start new sentence |
 | Punctuation | curly/smart quotes | straight quotes or no quotes |
 | Words | leverage, streamline, optimize | help, fix, make easier |
@@ -268,10 +322,10 @@ The message text is the VIDEO CAPTION. The prospect will see the demo video alon
 **DO reference the video naturally:** "montei isso pro seu site" (I built this for your site)
 **DO make it feel personal:** "for your site" / "for [Business Name]"
 
-**Good captions (specific, reference the attached video):**
-- "montei um assistente pro seu site que responde quem chega procurando mentoria as 23h. da uma olhada e me fala o que achou"
-- "put together something for your site that handles enquiries while you're with clients. have a look and lmk what you think"
-- "criei algo pro seu site que qualifica leads e agenda sessoes sozinho. ve o video e me diz"
+**Good captions (specific, signal-anchored, reference the attached video):**
+- "montei um assistente pro seu site que responde quem chega procurando mentoria executiva as 23h. da uma olhada e me fala o que achou"
+- "put together something for your site that handles enquiries about your leadership program while you're with clients. have a look and lmk what you think"
+- "criei algo pro seu site que qualifica leads que perguntam sobre o programa de 12 semanas e agenda sessoes sozinho. ve o video e me diz"
 
 **Bad captions:**
 - "we have a demo for your business. want to see it?" (too vague — they CAN see it, it's attached)
@@ -281,131 +335,22 @@ The message text is the VIDEO CAPTION. The prospect will see the demo video alon
 
 ---
 
-## Message Architectures (8 Types)
+## RULE 13: Anti-Fingerprinting (Detailed rules in `references/anti-fingerprinting.md`)
 
-Rotate strictly. In a batch of 10, use at least 5 different architectures. Never use the same architecture consecutively.
+Read the full anti-fingerprinting reference for WhatsApp ML detection avoidance. Key summary:
 
-### Architecture 1: The Observation + Loss
-**Pattern:** [I noticed X about your business] -> [Loss scenario: what that costs you] -> [I built Y] -> [Question]
-Best when: company_info reveals a clear gap (no chat on site, slow response times, no WhatsApp automation)
-
-### Architecture 2: The Loss-First Opener
-**Pattern:** [Loss scenario — hit them with the pain immediately] -> [Brief pivot: that's why I built X] -> [Question]
-Best when: universal pain point for their niche (missed leads at night, slow response time)
-
-### Architecture 3: The Compliment + Gap
-**Pattern:** [Genuine compliment about their work/content/site] -> [Pivot to loss scenario] -> [What you built] -> [Question]
-Best when: company_info mentions notable content, achievements, or strong online presence
-
-### Architecture 4: The Peer Introduction + Loss
-**Pattern:** [Position yourself as someone who works with people in their space] -> [Loss scenario their peers face] -> [What you built] -> [Question]
-Best when: niche is clearly defined (coaching, consulting, therapy)
-
-### Architecture 5: The Question Lead
-**Pattern:** [Pain point question] -> [Brief "I ask because..."] -> [Mention what you built] -> [Question]
-Best when: the pain point is universal for their niche
-
-### Architecture 6: The Direct Demo (LINK MODE ONLY)
-**Pattern:** [Short intro] -> [Direct link to demo] -> [Question]
-**Use ONLY when user explicitly requests links in first message.**
-
-### Architecture 7: The Specific Result
-**Pattern:** [Relevant stat or specific outcome] -> [How it connects to their situation — loss] -> [What you built] -> [Question]
-Best when: you have a credible stat or result
-
-### Architecture 8: The Mutual Context
-**Pattern:** [How you found them + what caught your eye] -> [Loss scenario] -> [What you built] -> [Question]
-Best when: instagram is present, or you can reference Google/a specific platform
-
----
-
-## Anti-Fingerprinting Rules — Defeating WhatsApp's ML Detection
-
-WhatsApp uses message similarity detection, hash-based fingerprinting, and ML models to cluster templated messages. Surface-level word swapping doesn't help. You must vary the STRUCTURE and SEMANTICS.
-
-### Rule 13a: STRUCTURAL VARIATION
-
-**Never send two consecutive messages with the same element order.** Vary whether you lead with loss, compliment, observation, or the demo mention.
-
-**Three element orders to rotate:**
-- **Order X:** Loss scenario first -> what you built -> question
-- **Order Y:** Observation/compliment first -> loss scenario -> what you built -> question
-- **Order Z:** What you built first -> WHY you built it (loss scenario) -> question
-
-**RULE: In a batch of 5+, use at least 2 different element orders.**
-
-### Rule 13b: SENTENCE RHYTHM VARIATION
-
-**WhatsApp's ML analyzes sentence cadence.** If every message follows the same rhythm pattern (medium, long, short), that's detectable.
-
-- **Some messages:** Start long, then punch short. "Tava olhando seu site de coaching executivo e notei que nao tem ninguem pra responder quando alguem chega as 23h procurando mentoria. montei algo pra isso. quer ver?"
-- **Some messages:** Start short, build. "Oi. montei um assistente AI pro seu site. ele responde quem chega procurando coaching fora do horario comercial, quando ninguem ta la pra responder. posso te mandar?"
-- **Some messages:** Fragment-heavy. "seu site de coaching. muito bom. mas 23h, alguem chega com duvida sobre o programa. ninguem responde. montei algo que resolve isso. te interessa?"
-
-**No two consecutive messages should have the same sentence rhythm pattern.**
-
-### Rule 13c: SEMANTIC VARIATION
-
-WhatsApp converts messages into vectors and clusters similar ones. Surface-level word swapping doesn't change the vector.
-
-**What changes the vector (vary these):**
-1. **Architecture** (1-8): genuinely different approach = different vector
-2. **Loss angle** (Rule 2): "after-hours miss" vs "during-session miss" vs "speed gap" = genuinely different meanings
-3. **Demo detail highlighted**: "answers at midnight" vs "qualifies leads" vs "books sessions" = different outcome emphasis
-4. **Opening style**: greeting vs observation vs question vs loss vs demo-lead
-5. **CTA variation**: "posso te mandar?" vs "quer ver?" vs "faz sentido?" vs "te interessa?"
-
-**TEST: Summarize this message and the last 3 in one sentence each. If they all sound like "mentioned loss, said they built something, asked to send" — the vectors are too similar. At least 2 elements must genuinely differ.**
-
-### Rule 13d: PAIN ANGLE ROTATION
-
-**RULE: Never use the same pain angle (Rule 2) for two consecutive leads in a batch.** Rotate through all 6 B2B loss scenarios.
-
-**Vary the PRONOUN for the lost lead** — don't always use "someone." Rotate: "alguem", "um lead", "uma pessoa", "um potencial cliente", "quem chega no site", "essa pessoa." Using the same pronoun in every message is a detectable pattern.
-
----
-
-## Language-Specific Guidelines
-
-### Portuguese (Brazil) — "pt"
-- Informal "voce", never "o senhor"
-- Brazilian expressions: "Oi", "E ai", "Show!", "Tudo bem?"
-- Best CTA: "Posso te mandar?" or "Quer ver como ficou?"
-- Natural WhatsApp spelling — not formal written Portuguese
-- Reference Pix, WhatsApp culture (98.9% penetration)
-- Coaching terms in PT: "sessao", "mentorado", "aluno", "processo", "agendamento"
-
-### English (Ireland/UK) — "en"
-- Warm but slightly more formal than PT
-- "Hi" not "Hey" (first contact)
-- Use "enquiries", "bookings", "diary" (not "appointments", "schedule")
-- Best CTA: "Worth a quick look?" or "Can I send it over?"
-- Don't over-sell — understatement works better in Irish culture
-
-### Spanish (LATAM) — "es"
-- Informal "tu" for most LATAM countries
-- "Hola", "Que tal", "Oye"
-- Best CTA: "Te lo mando?" or "Quieres verlo?"
-- Use country-specific terms if city is known
-
----
-
-## Anti-Spam Uniqueness Rules
-
-1. **No two messages start the same way.** Vary the opening STRUCTURE, not just the name.
-2. **In a batch of 10: minimum 5 different architectures.**
-3. **Vary word count:** some 35 words, some 65. Not all the same length.
-4. **Match tone to niche:** softer for therapists/wellness, more direct for business consultants, casual for creative coaches.
-5. **Never use "automacao"/"automation"** — say "funciona 24h", "responde sozinho", "agenda automaticamente".
-6. **Never mention pricing.** Goal = start conversation, not close sale.
-7. **Never mention company name "Winbix" in first message.** We're a person helping, not a company selling.
-8. **Always mention both site AND WhatsApp** in the first message. Vary HOW — sometimes lead with site, sometimes with WhatsApp, sometimes mention both equally.
+- **13a: Structural variation** — rotate element order (X/Y/Z) across messages
+- **13b: Sentence rhythm** — vary long/short/fragment patterns
+- **13c: Semantic variation** — change architecture, loss angle, demo detail, opening style, CTA
+- **13d: Pain angle rotation** — never repeat the same loss scenario consecutively
 
 ---
 
 ## Follow-Up Message Rules
 
 **VIDEO-FIRST MODEL:** The follow-up is sent ONLY to non-responders after 3-4 days. Since the video was already sent, the follow-up REFERENCES the video.
+
+**Follow-up timing matters:** Research shows 2-3 follow-ups increase response by 65.8%. Our follow-up is designed to be a gentle nudge with added value (the demo link), not a re-pitch.
 
 ### Follow-up Variant A — Demo link EXISTS (demo column has URL)
 References the video + includes demo link for live testing:
@@ -429,6 +374,13 @@ References the video + offers to arrange a live test:
 
 **Follow-up tone:** Casual nudge, not a re-pitch. They already SAW the video.
 
+### Follow-up Variant C — Second follow-up (7 days, high-value leads only)
+A breakup-style message that creates gentle urgency:
+- PT: "oi, so passando pra avisar que o assistente AI que montei pro seu site ainda ta ativo. se nao for util, sem problema, eu desativo. so me avisa"
+- EN: "hey, just a heads up — the AI assistant I set up for your site is still live. if it's not useful, no worries, I'll take it down. just let me know"
+
+**Why this works:** The "I'll remove it" trigger creates loss aversion — they feel like something that's THEIRS is being taken away.
+
 ---
 
 ## B2B Pain Points — Frame as LOSSES (for your knowledge)
@@ -448,62 +400,52 @@ These are the real pains coaches/consultants face. Use them to craft specific lo
 
 ## Example Messages (inspiration ONLY — never copy, always unique)
 
-**NOTE:** These examples are VIDEO CAPTIONS — the demo video is attached alongside. They show different architectures, loss angles, rhythms, element orders, and CTAs. Real batches must have this diversity. **Never copy these.**
+**NOTE:** These examples are VIDEO CAPTIONS — the demo video is attached alongside. They demonstrate signal-anchored personalization with specific business details. **Never copy these.**
 
-**Architecture 1 (Observation + Loss) — PT, "after-hours" angle, pronoun "alguem" (50 words):**
+**Architecture 1 (Observation + Loss) — PT, "after-hours" angle (45 words):**
 
 ```text
-Oi, tava olhando seu site de coaching executivo e achei muito bom o conteudo
+Oi, vi que seu site de coaching executivo tem um programa de lideranca de 12 semanas muito bom
 
-so que quando alguem chega no site as 23h procurando mentoria e tem duvida sobre o programa... ninguem ta la pra responder. essa pessoa vai pro proximo coach
+so que quando alguem chega as 23h com duvida sobre o programa... ninguem responde. essa pessoa vai pro proximo coach
 
 montei isso pro seu site. da uma olhada e me fala o que achou
 ```
 
-**Architecture 2 (Loss-First) — EN, "during-session" angle, pronoun "a potential client" (46 words):**
+**Architecture 2 (Loss-First) — EN, "during-session" angle (42 words):**
 
 ```text
-Hi, quick thought. while you're on a coaching call and a potential client messages your WhatsApp asking about your program... that message sits there for 3 hours. by the time you see it they've already reached out to someone else
+Hi, quick thought. while you're on a coaching call and someone messages asking about your leadership program... that message sits there for hours. by the time you reply they've already booked with someone else
 
-put together something for your site that handles this. have a look and lmk what you think
+put together something for your site. have a look and lmk what you think
 ```
 
-**Architecture 3 (Compliment + Gap) — PT, "speed gap" angle, pronoun "quem chega" (52 words):**
+**Architecture 3 (Compliment + Gap) — PT, "speed gap" angle (48 words):**
 
 ```text
-Oi, seu trabalho com mentoria de negocios e muito solido, da pra ver pelos depoimentos no site
+Oi, seu trabalho com mentoria de negocios e muito solido, da pra ver pelo programa de aceleracao no site
 
-mas quando quem chega no seu site tem uma duvida sobre o processo de coaching e demora 6 horas pra receber resposta... o coach que responde em 5 minutos ganha esse cliente
+mas quando quem chega no site tem duvida sobre o processo e demora 6 horas pra receber resposta... o coach que responde em 5 minutos ganha esse cliente
 
 criei um assistente AI pro seu site. ve o video e me diz o que acha
 ```
 
-**Architecture 5 (Question Lead) — ES, "weekend" angle, pronoun "alguien" (44 words):**
+**Architecture 5 (Question Lead) — ES, "weekend" angle (40 words):**
 
 ```text
-Hola, te hago una pregunta. que pasa cuando alguien visita tu sitio un domingo a la noche buscando coaching y tiene preguntas sobre tu programa? nadie contesta hasta el lunes
+Hola, te hago una pregunta. que pasa cuando alguien visita tu sitio un domingo buscando tu programa de coaching empresarial y tiene preguntas? nadie contesta hasta el lunes
 
-pregunto porque arme un asistente AI para tu sitio que resuelve eso. dale un vistazo y dime que te parece
+pregunto porque arme algo para tu sitio. dale un vistazo y dime que te parece
 ```
 
-**Architecture 8 (Mutual Context) — PT, with Demo link, "post-content" angle (55 words):**
+**Architecture 8 (Mutual Context) — PT, with Demo link, "post-content" angle (50 words):**
 
 ```text
-Oi, vi seu perfil e seu conteudo sobre coaching de vendas. muito bom
+Oi, vi seu conteudo sobre coaching de vendas no Instagram. muito bom o metodo dos 5 pilares
 
-so que quando alguem assiste seu conteudo, fica interessado e manda mensagem no WhatsApp a noite com duvidas... se demora pra responder o interesse esfria
+so que quando alguem assiste e manda mensagem no WhatsApp a noite perguntando sobre o programa... se demora pra responder o interesse esfria
 
-montei um assistente AI pro seu site e pro WhatsApp que responde na hora. olha o que montei e me fala
-```
-
-**Architecture 4 (Peer Intro) — PT, WITHOUT Demo link, "speed gap" angle (52 words):**
-
-```text
-Oi, trabalho com coaches e consultores montando assistentes AI que respondem clientes 24h
-
-o problema e que quando um lead chega no seu site ou WhatsApp fora do horario e demora pra ter resposta... ele ja ta falando com outro coach
-
-montei um pro seu site e WhatsApp. posso te mandar o link pra testar ao vivo?
+montei um assistente AI pro seu site e pro WhatsApp. olha o que montei e me fala
 ```
 
 ---
@@ -511,7 +453,8 @@ montei um pro seu site e WhatsApp. posso te mandar o link pra testar ao vivo?
 ## Quality Checklist (verify EVERY message before saving)
 
 **Format test:**
-- [ ] 30-70 words (hard limit 80)
+
+- [ ] 30-50 words ideal, hard limit 70 words
 - [ ] 5th-7th grade reading level
 - [ ] Ends with Tier 1 or Tier 2 question (video-first CTA — reaction-based, NOT "can I send it?")
 - [ ] No links (video is attached, demo link goes in follow-up only)
@@ -519,15 +462,18 @@ montei um pro seu site e WhatsApp. posso te mandar o link pra testar ao vivo?
 - [ ] No formal greeting
 - [ ] No company name or signature
 
-**Personalization test:**
+**Signal-anchored personalization test:**
+
 - [ ] Contains "already built for you" reciprocity trigger
-- [ ] References specific details from company_info (not generic)
+- [ ] References at least ONE specific signal from company_info (program name, service, method, URL)
 - [ ] Contains a SPECIFIC loss scenario relevant to their niche (Rule 2)
+- [ ] Loss scenario uses signal-specific details (not generic "your business")
 - [ ] Mentions BOTH site AND WhatsApp (Rule 8 — always required)
 - [ ] CTA matches variant: reaction-based if demo link exists, offer-based if no demo link (Rule 8)
 - [ ] Unique structure — different from every other message in batch
 
 **Anti-spam test:**
+
 - [ ] No spam words: "free", "limited", "offer", "exclusive", "act now", "opportunity"
 - [ ] No "automacao"/"automation" — use natural alternatives (Rule 10)
 - [ ] No banned product terms: chatbot, bot, software, tool, system, platform, demo, solution (Rule 10)
@@ -537,7 +483,8 @@ montei um pro seu site e WhatsApp. posso te mandar o link pra testar ao vivo?
 - [ ] No AI-tell words (leverage, streamline, optimize, seamless, etc.) (Rule 9)
 - [ ] Tone matches niche
 
-**Anti-fingerprinting test (Rule 13):**
+**Anti-fingerprinting test (see `references/anti-fingerprinting.md`):**
+
 - [ ] Uses a different ARCHITECTURE than the previous message in this batch
 - [ ] Uses a different LOSS ANGLE than the previous message (Rule 2 rotation)
 - [ ] Element ORDER differs from previous message (Rule 13a: X/Y/Z rotation)
@@ -547,6 +494,7 @@ montei um pro seu site e WhatsApp. posso te mandar o link pra testar ao vivo?
 - [ ] CTA wording differs from previous message
 
 **Sales test:**
+
 - [ ] Does NOT pitch the product
 - [ ] Frames around LOSS, not gain (Rule 2)
 - [ ] No negative social proof

@@ -62,6 +62,11 @@ If passes — show stats and ask for confirmation before generating.
 
 All message writing rules are in `RULES.md` (same directory as this file). Sub-agents read that file before generating.
 
+Detailed references (sub-agents read only when needed):
+- `references/architectures.md` — 8 message architectures with selection matrix
+- `references/anti-fingerprinting.md` — WhatsApp ML detection avoidance rules
+- `references/language-guides.md` — PT/EN/ES cultural and language guidelines
+
 **Step 1:** Get the list of leads without start messages:
 
 ```bash
@@ -101,7 +106,7 @@ Steps:
    - **Variant A** (demo_link EXISTS): mention BOTH site + WhatsApp, CTA = reaction-based ("have a look and lmk what you think")
    - **Variant B** (NO demo_link): still mention both site + WhatsApp, CTA = offer-based ("can send you a link to test live")
 6. Write the FIRST MESSAGE (this is a VIDEO CAPTION — the demo video is attached alongside):
-   - 30-70 words (hard limit 80), 5th-7th grade reading level
+   - 30-50 words ideal, hard limit 70 words, 5th-7th grade reading level
    - Contains "already built for you" reciprocity trigger (Rule 1)
    - Contains a SPECIFIC loss scenario relevant to their niche (Rule 2) using the assigned loss angle
    - References specific details from company_info (Rule 6)
@@ -113,6 +118,7 @@ Steps:
    - No links, no company name, no pitch, max 1 emoji
    - Matches language from the language column (pt/en/es, default pt)
    - Vary sentence rhythm from the assigned element order (Rule 13b)
+   - SIGNAL-ANCHORED: Reference at least ONE specific detail from their business (program name, service, method) — not generic niche references
 7. Write the FOLLOW-UP MESSAGE (sent ONLY to non-responders after 3-4 days):
    - References the video that was already sent
    - **Variant A** (demo_link exists): includes demo link for live testing
@@ -165,7 +171,7 @@ python3 /Users/devlink007/DemoSender/.claude/skills/create-wa-message/scripts/ge
 - **Sheet not accessible**: Share with `aisheets@aisheets-486216.iam.gserviceaccount.com`
 - **No Phone column**: Tell user to add one
 - **No company_info or website**: Use whatever is available. If truly nothing to personalize, skip that lead.
-- **Message too long**: Rewrite shorter. Hard limit 80 words.
+- **Message too long**: Rewrite shorter. Target 30-50 words, hard limit 70 words.
 
 ## Configuration
 
