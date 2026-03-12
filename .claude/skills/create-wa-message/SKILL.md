@@ -100,7 +100,9 @@ Steps:
    - Check demo_link (website demo link from Demo column) — determines Variant A or B (Rule 8)
    - whatsapp_demo = video URL for sending (used by wa-outreach, NOT referenced in message text)
    - Note the language (default: "pt")
-   - If website is present, WebFetch it for additional personalization data
+   - If website is present, use the SCRAPER for structured data (saves tokens):
+     python3 {SCRIPT} scrape <WEBSITE_URL>
+     Only use WebFetch if scraper output lacks specific details you need
 4. Use the ASSIGNED architecture, loss angle, and element order.
 5. Determine VARIANT (Rule 8):
    - **Variant A** (demo_link EXISTS): mention BOTH site + WhatsApp, CTA = reaction-based ("have a look and lmk what you think")

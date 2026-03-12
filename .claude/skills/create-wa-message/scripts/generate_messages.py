@@ -35,6 +35,7 @@ from _shared import (
     get_sheet_title,
     send_telegram_report,
 )
+from _shared.scraper import scrape_website
 
 
 # ──────────────────────────────────────────
@@ -363,6 +364,15 @@ def cmd_save_followup(spreadsheet_id: str, row_number: int, file_path: str = Non
     print(f"    Preview: {message_text[:150]}...")
 
 
+def cmd_scrape(url: str):
+    """Scrape a website and print structured summary for sub-agent consumption."""
+    result = scrape_website(url)
+    if result.get("error"):
+        print(f"ERROR: {result['error']}")
+        sys.exit(1)
+    print(result["summary"])
+
+
 def cmd_report(spreadsheet_id: str):
     """Send Telegram report with current stats."""
     env_vars = load_env()
@@ -460,6 +470,9 @@ def main():
             if fi + 1 < len(sys.argv):
                 file_path = sys.argv[fi + 1]
         cmd_save_followup(spreadsheet_id, int(sys.argv[3]), file_path)
+    elif command == "scrape":
+        # Special: scrape takes a URL, not a spreadsheet_id
+        cmd_scrape(spreadsheet_id)  # arg is URL here
     elif command == "report":
         cmd_report(spreadsheet_id)
     else:
